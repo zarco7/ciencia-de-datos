@@ -613,7 +613,7 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  Kurtosis_Sale_Price <span class="op">=</span> _.Sale_Price.kurtosis().<span class="bu">round</span>(<span class="dv">1</span>),</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="48">
 <div>
 
 
@@ -630,10 +630,10 @@ memory usage: 1.7+ MB</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>180796.1</td>
-<td>160000.0</td>
-<td>79886.7</td>
-<td>5.1</td>
+<td>180796.10</td>
+<td>160000.00</td>
+<td>79886.70</td>
+<td>5.10</td>
 </tr>
 </tbody>
 </table>
@@ -651,7 +651,7 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  Min_Sale_Price <span class="op">=</span> _.Sale_Price.<span class="bu">min</span>().<span class="bu">round</span>(<span class="dv">1</span>),</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="49">
 <div>
 
 
@@ -667,7 +667,7 @@ memory usage: 1.7+ MB</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>1.7</td>
+<td>1.70</td>
 <td>755000</td>
 <td>12789</td>
 </tr>
@@ -687,7 +687,7 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  Q3_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.75</span>),</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="50">
 <div>
 
 
@@ -703,9 +703,9 @@ memory usage: 1.7+ MB</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>129500.0</td>
-<td>160000.0</td>
-<td>213500.0</td>
+<td>129500.00</td>
+<td>160000.00</td>
+<td>213500.00</td>
 </tr>
 </tbody>
 </table>
@@ -727,7 +727,7 @@ memory usage: 1.7+ MB</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="51">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -744,7 +744,7 @@ memory usage: 1.7+ MB</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="52">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -758,7 +758,7 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>( (_.Sale_Price <span class="op">&gt;</span> <span class="dv">339500</span>) ) <span class="op">&gt;&gt;</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  select (_.Overall_Cond, _.Lot_Area, _.Neighborhood, _.Heating_QC, _.Sale_Price) </span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="53">
 <div>
 
 
@@ -875,7 +875,7 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  ames <span class="op">&gt;&gt;</span> </span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>((_.Heating_QC <span class="op">==</span> <span class="st">"Excellent"</span>) <span class="op">&amp;</span> (_.Sale_Price <span class="op">&gt;=</span> <span class="dv">339500</span>)) <span class="op">&gt;&gt;</span> select (_.Overall_Cond, _.Lot_Area, _.Neighborhood, _.Heating_QC, _.Sale_Price)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="54">
 <div>
 
 
@@ -993,7 +993,7 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>((_.Heating_QC <span class="op">==</span> <span class="st">"Excellent"</span>) <span class="op">&amp;</span> (_.Sale_Price <span class="op">&gt;=</span> <span class="dv">339500</span>)) <span class="op">&gt;&gt;</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  select(_.Neighborhood) <span class="op">&gt;&gt;</span> arrange(_.Neighborhood) <span class="op">&gt;&gt;</span> count(_.Neighborhood) </span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="55">
 <div>
 
 
@@ -1066,7 +1066,7 @@ memory usage: 1.7+ MB</code></pre>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> select(_.MS_SubClass, _.Overall_Cond, _.Latitude, _.Longitude, _.Sale_Price) <span class="op">&gt;&gt;</span> <span class="bu">filter</span>((_.Sale_Price <span class="op">==</span> _.Sale_Price.<span class="bu">min</span>()) <span class="op">|</span> (_.Sale_Price <span class="op">==</span> _.Sale_Price.<span class="bu">max</span>()))</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="56">
 <div>
 
 
@@ -1086,16 +1086,16 @@ memory usage: 1.7+ MB</code></pre>
 <td data-quarto-table-cell-role="th">181</td>
 <td>One_Story_1945_and_Older</td>
 <td>Poor</td>
-<td>42.030388</td>
-<td>-93.606789</td>
+<td>42.03</td>
+<td>-93.61</td>
 <td>12789</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1767</td>
 <td>Two_Story_1946_and_Newer</td>
 <td>Above_Average</td>
-<td>42.051980</td>
-<td>-93.657271</td>
+<td>42.05</td>
+<td>-93.66</td>
 <td>755000</td>
 </tr>
 </tbody>
@@ -1132,184 +1132,184 @@ memory usage: 1.7+ MB</code></pre>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation_matrix)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                    Lot_Frontage  Lot_Area  Year_Built  Year_Remod_Add  \
-Lot_Frontage            1.000000  0.136862    0.026130        0.069509   
-Lot_Area                0.136862  1.000000    0.023258        0.021682   
-Year_Built              0.026130  0.023258    1.000000        0.612095   
-Year_Remod_Add          0.069509  0.021682    0.612095        1.000000   
-Mas_Vnr_Area            0.109858  0.125950    0.306797        0.191740   
-BsmtFin_SF_1            0.066707 -0.045760   -0.179373       -0.050840   
-BsmtFin_SF_2           -0.005254  0.083198   -0.027328       -0.061934   
-Bsmt_Unf_SF             0.139290  0.023883    0.129311        0.165397   
-Total_Bsmt_SF           0.206080  0.253765    0.407764        0.298393   
-First_Flr_SF            0.241707  0.332235    0.310463        0.242108   
-Second_Flr_SF          -0.002813  0.032996    0.016828        0.158939   
-Gr_Liv_Area             0.186767  0.285599    0.241726        0.316855   
-Bsmt_Full_Bath          0.019554  0.124208    0.212119        0.134590   
-Bsmt_Half_Bath         -0.031798  0.026448   -0.030515       -0.046175   
-Full_Bath               0.082826  0.127433    0.469406        0.457266   
-Half_Bath              -0.029367  0.035497    0.269268        0.211771   
-Bedroom_AbvGr           0.112718  0.136569   -0.055093       -0.021536   
-Kitchen_AbvGr           0.022127 -0.020301   -0.137852       -0.142404   
-TotRms_AbvGrd           0.200488  0.216597    0.111919        0.197528   
-Fireplaces              0.051240  0.256989    0.170672        0.133322   
-Garage_Cars             0.142774  0.179456    0.537982        0.424416   
-Garage_Area             0.186780  0.212749    0.480726        0.375566   
-Wood_Deck_SF            0.001162  0.157212    0.228964        0.217857   
-Open_Porch_SF           0.085480  0.103760    0.198365        0.241748   
-Enclosed_Porch          0.024824  0.021868   -0.374364       -0.220383   
-Three_season_porch      0.004061  0.016243    0.015803        0.037412   
-Screen_Porch            0.045789  0.055044   -0.041436       -0.046888   
-Pool_Area               0.109439  0.093775    0.002213       -0.011410   
-Misc_Val                0.003098  0.069188   -0.011011       -0.003132   
-Mo_Sold                 0.017357  0.003859    0.014577        0.018048   
-Year_Sold              -0.011737 -0.023085   -0.013197        0.032652   
-Sale_Price              0.201875  0.266549    0.558426        0.532974   
-Longitude              -0.022051 -0.098612   -0.425568       -0.323822   
-Latitude                0.046942 -0.036629    0.251397        0.181050   
+Lot_Frontage                1.00      0.14        0.03            0.07   
+Lot_Area                    0.14      1.00        0.02            0.02   
+Year_Built                  0.03      0.02        1.00            0.61   
+Year_Remod_Add              0.07      0.02        0.61            1.00   
+Mas_Vnr_Area                0.11      0.13        0.31            0.19   
+BsmtFin_SF_1                0.07     -0.05       -0.18           -0.05   
+BsmtFin_SF_2               -0.01      0.08       -0.03           -0.06   
+Bsmt_Unf_SF                 0.14      0.02        0.13            0.17   
+Total_Bsmt_SF               0.21      0.25        0.41            0.30   
+First_Flr_SF                0.24      0.33        0.31            0.24   
+Second_Flr_SF              -0.00      0.03        0.02            0.16   
+Gr_Liv_Area                 0.19      0.29        0.24            0.32   
+Bsmt_Full_Bath              0.02      0.12        0.21            0.13   
+Bsmt_Half_Bath             -0.03      0.03       -0.03           -0.05   
+Full_Bath                   0.08      0.13        0.47            0.46   
+Half_Bath                  -0.03      0.04        0.27            0.21   
+Bedroom_AbvGr               0.11      0.14       -0.06           -0.02   
+Kitchen_AbvGr               0.02     -0.02       -0.14           -0.14   
+TotRms_AbvGrd               0.20      0.22        0.11            0.20   
+Fireplaces                  0.05      0.26        0.17            0.13   
+Garage_Cars                 0.14      0.18        0.54            0.42   
+Garage_Area                 0.19      0.21        0.48            0.38   
+Wood_Deck_SF                0.00      0.16        0.23            0.22   
+Open_Porch_SF               0.09      0.10        0.20            0.24   
+Enclosed_Porch              0.02      0.02       -0.37           -0.22   
+Three_season_porch          0.00      0.02        0.02            0.04   
+Screen_Porch                0.05      0.06       -0.04           -0.05   
+Pool_Area                   0.11      0.09        0.00           -0.01   
+Misc_Val                    0.00      0.07       -0.01           -0.00   
+Mo_Sold                     0.02      0.00        0.01            0.02   
+Year_Sold                  -0.01     -0.02       -0.01            0.03   
+Sale_Price                  0.20      0.27        0.56            0.53   
+Longitude                  -0.02     -0.10       -0.43           -0.32   
+Latitude                    0.05     -0.04        0.25            0.18   
 
                     Mas_Vnr_Area  BsmtFin_SF_1  BsmtFin_SF_2  Bsmt_Unf_SF  \
-Lot_Frontage            0.109858      0.066707     -0.005254     0.139290   
-Lot_Area                0.125950     -0.045760      0.083198     0.023883   
-Year_Built              0.306797     -0.179373     -0.027328     0.129311   
-Year_Remod_Add          0.191740     -0.050840     -0.061934     0.165397   
-Mas_Vnr_Area            1.000000     -0.107222     -0.014955     0.089662   
-BsmtFin_SF_1           -0.107222      1.000000     -0.121751     0.488014   
-BsmtFin_SF_2           -0.014955     -0.121751      1.000000    -0.238420   
-Bsmt_Unf_SF             0.089662      0.488014     -0.238420     1.000000   
-Total_Bsmt_SF           0.393530     -0.163311      0.090109     0.412248   
-First_Flr_SF            0.392280     -0.123074      0.084710     0.296139   
-Second_Flr_SF           0.120159      0.159652     -0.098188     0.002320   
-Gr_Liv_Area             0.400703      0.046419     -0.017996     0.235870   
-Bsmt_Full_Bath          0.139684     -0.473424      0.163634    -0.398629   
-Bsmt_Half_Bath          0.016609     -0.114581      0.099147    -0.105784   
-Full_Bath               0.254471      0.051531     -0.076262     0.274901   
-Half_Bath               0.188703      0.034869     -0.033004    -0.033530   
-Bedroom_AbvGr           0.080590      0.108739     -0.033033     0.188508   
-Kitchen_AbvGr          -0.050733      0.103491     -0.037864     0.065651   
-TotRms_AbvGrd           0.278418      0.107549     -0.049288     0.251633   
-Fireplaces              0.270051     -0.143130      0.067180     0.001790   
-Garage_Cars             0.356831     -0.077813     -0.014118     0.180080   
-Garage_Area             0.370479     -0.096932      0.003625     0.164837   
-Wood_Deck_SF            0.165875     -0.146419      0.098591    -0.039285   
-Open_Porch_SF           0.140003     -0.002644     -0.005516     0.119143   
-Enclosed_Porch         -0.109915      0.098732      0.032415     0.006383   
-Three_season_porch      0.014222     -0.048145     -0.023314    -0.005399   
-Screen_Porch            0.066817     -0.044111      0.062978    -0.047945   
-Pool_Area               0.004893     -0.025391      0.044403    -0.031963   
-Misc_Val                0.045276     -0.042043     -0.005195    -0.010125   
-Mo_Sold                -0.002358      0.017495     -0.009401     0.021915   
-Year_Sold              -0.016876     -0.035765      0.007089    -0.036443   
-Sale_Price              0.502196     -0.134905      0.006018     0.183308   
-Longitude              -0.081546      0.061665     -0.025502    -0.048123   
-Latitude                0.216882      0.005937     -0.021714     0.161017   
+Lot_Frontage                0.11          0.07         -0.01         0.14   
+Lot_Area                    0.13         -0.05          0.08         0.02   
+Year_Built                  0.31         -0.18         -0.03         0.13   
+Year_Remod_Add              0.19         -0.05         -0.06         0.17   
+Mas_Vnr_Area                1.00         -0.11         -0.01         0.09   
+BsmtFin_SF_1               -0.11          1.00         -0.12         0.49   
+BsmtFin_SF_2               -0.01         -0.12          1.00        -0.24   
+Bsmt_Unf_SF                 0.09          0.49         -0.24         1.00   
+Total_Bsmt_SF               0.39         -0.16          0.09         0.41   
+First_Flr_SF                0.39         -0.12          0.08         0.30   
+Second_Flr_SF               0.12          0.16         -0.10         0.00   
+Gr_Liv_Area                 0.40          0.05         -0.02         0.24   
+Bsmt_Full_Bath              0.14         -0.47          0.16        -0.40   
+Bsmt_Half_Bath              0.02         -0.11          0.10        -0.11   
+Full_Bath                   0.25          0.05         -0.08         0.27   
+Half_Bath                   0.19          0.03         -0.03        -0.03   
+Bedroom_AbvGr               0.08          0.11         -0.03         0.19   
+Kitchen_AbvGr              -0.05          0.10         -0.04         0.07   
+TotRms_AbvGrd               0.28          0.11         -0.05         0.25   
+Fireplaces                  0.27         -0.14          0.07         0.00   
+Garage_Cars                 0.36         -0.08         -0.01         0.18   
+Garage_Area                 0.37         -0.10          0.00         0.16   
+Wood_Deck_SF                0.17         -0.15          0.10        -0.04   
+Open_Porch_SF               0.14         -0.00         -0.01         0.12   
+Enclosed_Porch             -0.11          0.10          0.03         0.01   
+Three_season_porch          0.01         -0.05         -0.02        -0.01   
+Screen_Porch                0.07         -0.04          0.06        -0.05   
+Pool_Area                   0.00         -0.03          0.04        -0.03   
+Misc_Val                    0.05         -0.04         -0.01        -0.01   
+Mo_Sold                    -0.00          0.02         -0.01         0.02   
+Year_Sold                  -0.02         -0.04          0.01        -0.04   
+Sale_Price                  0.50         -0.13          0.01         0.18   
+Longitude                  -0.08          0.06         -0.03        -0.05   
+Latitude                    0.22          0.01         -0.02         0.16   
 
                     Total_Bsmt_SF  First_Flr_SF  ...  Enclosed_Porch  \
-Lot_Frontage             0.206080      0.241707  ...        0.024824   
-Lot_Area                 0.253765      0.332235  ...        0.021868   
-Year_Built               0.407764      0.310463  ...       -0.374364   
-Year_Remod_Add           0.298393      0.242108  ...       -0.220383   
-Mas_Vnr_Area             0.393530      0.392280  ...       -0.109915   
-BsmtFin_SF_1            -0.163311     -0.123074  ...        0.098732   
-BsmtFin_SF_2             0.090109      0.084710  ...        0.032415   
-Bsmt_Unf_SF              0.412248      0.296139  ...        0.006383   
-Total_Bsmt_SF            1.000000      0.800429  ...       -0.084848   
-First_Flr_SF             0.800429      1.000000  ...       -0.065713   
-Second_Flr_SF           -0.204487     -0.250057  ...        0.055429   
-Gr_Liv_Area              0.445108      0.562166  ...        0.004030   
-Bsmt_Full_Bath           0.326861      0.257836  ...       -0.069014   
-Bsmt_Half_Bath           0.012850      0.010469  ...       -0.009272   
-Full_Bath                0.325434      0.371584  ...       -0.117795   
-Half_Bath               -0.054557     -0.104203  ...       -0.081312   
-Bedroom_AbvGr            0.052721      0.106648  ...        0.052115   
-Kitchen_AbvGr           -0.038612      0.076025  ...        0.027911   
-TotRms_AbvGrd            0.281627      0.390162  ...        0.017221   
-Fireplaces               0.333467      0.406345  ...       -0.000250   
-Garage_Cars              0.437856      0.439471  ...       -0.134856   
-Garage_Area              0.485608      0.491208  ...       -0.108237   
-Wood_Deck_SF             0.230290      0.227131  ...       -0.119136   
-Open_Porch_SF            0.245941      0.238041  ...       -0.059875   
-Enclosed_Porch          -0.084848     -0.065713  ...        1.000000   
-Three_season_porch       0.037918      0.044061  ...       -0.032674   
-Screen_Porch             0.075499      0.098316  ...       -0.063965   
-Pool_Area                0.072109      0.121821  ...        0.092596   
-Misc_Val                 0.083895      0.093003  ...        0.008773   
-Mo_Sold                  0.017325      0.040496  ...       -0.021324   
-Year_Sold               -0.010524     -0.013667  ...       -0.000505   
-Sale_Price               0.632529      0.621676  ...       -0.128787   
-Longitude               -0.161092     -0.135877  ...        0.140129   
-Latitude                 0.175561      0.129733  ...       -0.095854   
+Lot_Frontage                 0.21          0.24  ...            0.02   
+Lot_Area                     0.25          0.33  ...            0.02   
+Year_Built                   0.41          0.31  ...           -0.37   
+Year_Remod_Add               0.30          0.24  ...           -0.22   
+Mas_Vnr_Area                 0.39          0.39  ...           -0.11   
+BsmtFin_SF_1                -0.16         -0.12  ...            0.10   
+BsmtFin_SF_2                 0.09          0.08  ...            0.03   
+Bsmt_Unf_SF                  0.41          0.30  ...            0.01   
+Total_Bsmt_SF                1.00          0.80  ...           -0.08   
+First_Flr_SF                 0.80          1.00  ...           -0.07   
+Second_Flr_SF               -0.20         -0.25  ...            0.06   
+Gr_Liv_Area                  0.45          0.56  ...            0.00   
+Bsmt_Full_Bath               0.33          0.26  ...           -0.07   
+Bsmt_Half_Bath               0.01          0.01  ...           -0.01   
+Full_Bath                    0.33          0.37  ...           -0.12   
+Half_Bath                   -0.05         -0.10  ...           -0.08   
+Bedroom_AbvGr                0.05          0.11  ...            0.05   
+Kitchen_AbvGr               -0.04          0.08  ...            0.03   
+TotRms_AbvGrd                0.28          0.39  ...            0.02   
+Fireplaces                   0.33          0.41  ...           -0.00   
+Garage_Cars                  0.44          0.44  ...           -0.13   
+Garage_Area                  0.49          0.49  ...           -0.11   
+Wood_Deck_SF                 0.23          0.23  ...           -0.12   
+Open_Porch_SF                0.25          0.24  ...           -0.06   
+Enclosed_Porch              -0.08         -0.07  ...            1.00   
+Three_season_porch           0.04          0.04  ...           -0.03   
+Screen_Porch                 0.08          0.10  ...           -0.06   
+Pool_Area                    0.07          0.12  ...            0.09   
+Misc_Val                     0.08          0.09  ...            0.01   
+Mo_Sold                      0.02          0.04  ...           -0.02   
+Year_Sold                   -0.01         -0.01  ...           -0.00   
+Sale_Price                   0.63          0.62  ...           -0.13   
+Longitude                   -0.16         -0.14  ...            0.14   
+Latitude                     0.18          0.13  ...           -0.10   
 
                     Three_season_porch  Screen_Porch  Pool_Area  Misc_Val  \
-Lot_Frontage                  0.004061      0.045789   0.109439  0.003098   
-Lot_Area                      0.016243      0.055044   0.093775  0.069188   
-Year_Built                    0.015803     -0.041436   0.002213 -0.011011   
-Year_Remod_Add                0.037412     -0.046888  -0.011410 -0.003132   
-Mas_Vnr_Area                  0.014222      0.066817   0.004893  0.045276   
-BsmtFin_SF_1                 -0.048145     -0.044111  -0.025391 -0.042043   
-BsmtFin_SF_2                 -0.023314      0.062978   0.044403 -0.005195   
-Bsmt_Unf_SF                  -0.005399     -0.047945  -0.031963 -0.010125   
-Total_Bsmt_SF                 0.037918      0.075499   0.072109  0.083895   
-First_Flr_SF                  0.044061      0.098316   0.121821  0.093003   
-Second_Flr_SF                -0.032172      0.011741   0.044602 -0.005078   
-Gr_Liv_Area                   0.006481      0.086804   0.135463  0.067252   
-Bsmt_Full_Bath                0.027086      0.052355   0.043730 -0.004817   
-Bsmt_Half_Bath                0.026971      0.042372   0.066911  0.036996   
-Full_Bath                     0.015435     -0.015130   0.028205 -0.009771   
-Half_Bath                    -0.023231      0.035990   0.001515  0.026648   
-Bedroom_AbvGr                -0.047151      0.009250   0.036707  0.000887   
-Kitchen_AbvGr                -0.021379     -0.056337  -0.013066  0.025145   
-TotRms_AbvGrd                -0.025097      0.033731   0.072103  0.061134   
-Fireplaces                    0.018414      0.168004   0.098449  0.008192   
-Garage_Cars                   0.023405      0.043198   0.030415 -0.016861   
-Garage_Area                   0.029511      0.062598   0.053055  0.008526   
-Wood_Deck_SF                 -0.003967     -0.052191   0.094156  0.056820   
-Open_Porch_SF                -0.009458      0.047548   0.064135  0.077254   
-Enclosed_Porch               -0.032674     -0.063965   0.092596  0.008773   
-Three_season_porch            1.000000     -0.029430  -0.006501 -0.000753   
-Screen_Porch                 -0.029430      1.000000   0.026383  0.007162   
-Pool_Area                    -0.006501      0.026383   1.000000  0.011942   
-Misc_Val                     -0.000753      0.007162   0.011942  1.000000   
-Mo_Sold                       0.027229      0.028169  -0.042223  0.007333   
-Year_Sold                     0.022668     -0.006116  -0.052541  0.008574   
-Sale_Price                    0.032225      0.112151   0.068403 -0.015691   
-Longitude                     0.023723      0.048319  -0.001729  0.008715   
-Latitude                      0.004271      0.018962  -0.013976 -0.011554   
+Lot_Frontage                      0.00          0.05       0.11      0.00   
+Lot_Area                          0.02          0.06       0.09      0.07   
+Year_Built                        0.02         -0.04       0.00     -0.01   
+Year_Remod_Add                    0.04         -0.05      -0.01     -0.00   
+Mas_Vnr_Area                      0.01          0.07       0.00      0.05   
+BsmtFin_SF_1                     -0.05         -0.04      -0.03     -0.04   
+BsmtFin_SF_2                     -0.02          0.06       0.04     -0.01   
+Bsmt_Unf_SF                      -0.01         -0.05      -0.03     -0.01   
+Total_Bsmt_SF                     0.04          0.08       0.07      0.08   
+First_Flr_SF                      0.04          0.10       0.12      0.09   
+Second_Flr_SF                    -0.03          0.01       0.04     -0.01   
+Gr_Liv_Area                       0.01          0.09       0.14      0.07   
+Bsmt_Full_Bath                    0.03          0.05       0.04     -0.00   
+Bsmt_Half_Bath                    0.03          0.04       0.07      0.04   
+Full_Bath                         0.02         -0.02       0.03     -0.01   
+Half_Bath                        -0.02          0.04       0.00      0.03   
+Bedroom_AbvGr                    -0.05          0.01       0.04      0.00   
+Kitchen_AbvGr                    -0.02         -0.06      -0.01      0.03   
+TotRms_AbvGrd                    -0.03          0.03       0.07      0.06   
+Fireplaces                        0.02          0.17       0.10      0.01   
+Garage_Cars                       0.02          0.04       0.03     -0.02   
+Garage_Area                       0.03          0.06       0.05      0.01   
+Wood_Deck_SF                     -0.00         -0.05       0.09      0.06   
+Open_Porch_SF                    -0.01          0.05       0.06      0.08   
+Enclosed_Porch                   -0.03         -0.06       0.09      0.01   
+Three_season_porch                1.00         -0.03      -0.01     -0.00   
+Screen_Porch                     -0.03          1.00       0.03      0.01   
+Pool_Area                        -0.01          0.03       1.00      0.01   
+Misc_Val                         -0.00          0.01       0.01      1.00   
+Mo_Sold                           0.03          0.03      -0.04      0.01   
+Year_Sold                         0.02         -0.01      -0.05      0.01   
+Sale_Price                        0.03          0.11       0.07     -0.02   
+Longitude                         0.02          0.05      -0.00      0.01   
+Latitude                          0.00          0.02      -0.01     -0.01   
 
-                     Mo_Sold  Year_Sold  Sale_Price  Longitude  Latitude  
-Lot_Frontage        0.017357  -0.011737    0.201875  -0.022051  0.046942  
-Lot_Area            0.003859  -0.023085    0.266549  -0.098612 -0.036629  
-Year_Built          0.014577  -0.013197    0.558426  -0.425568  0.251397  
-Year_Remod_Add      0.018048   0.032652    0.532974  -0.323822  0.181050  
-Mas_Vnr_Area       -0.002358  -0.016876    0.502196  -0.081546  0.216882  
-BsmtFin_SF_1        0.017495  -0.035765   -0.134905   0.061665  0.005937  
-BsmtFin_SF_2       -0.009401   0.007089    0.006018  -0.025502 -0.021714  
-Bsmt_Unf_SF         0.021915  -0.036443    0.183308  -0.048123  0.161017  
-Total_Bsmt_SF       0.017325  -0.010524    0.632529  -0.161092  0.175561  
-First_Flr_SF        0.040496  -0.013667    0.621676  -0.135877  0.129733  
-Second_Flr_SF       0.013247  -0.018530    0.269373  -0.048694  0.097644  
-Gr_Liv_Area         0.043665  -0.026489    0.706780  -0.142516  0.179690  
-Bsmt_Full_Bath     -0.003322   0.044805    0.275823  -0.114529 -0.015952  
-Bsmt_Half_Bath      0.022741  -0.019556   -0.035817   0.052260 -0.039032  
-Full_Bath           0.046032  -0.004754    0.545604  -0.228773  0.214763  
-Half_Bath          -0.001311   0.001561    0.285056  -0.118501  0.167289  
-Bedroom_AbvGr       0.053677  -0.018008    0.143913  -0.038976  0.017599  
-Kitchen_AbvGr       0.035201   0.035421   -0.119814   0.067370 -0.074570  
-TotRms_AbvGrd       0.043784  -0.030498    0.495474  -0.086322  0.148099  
-Fireplaces          0.032152  -0.007612    0.474558  -0.057514  0.146768  
-Garage_Cars         0.050728  -0.021990    0.647562  -0.216828  0.260615  
-Garage_Area         0.040391  -0.012556    0.640138  -0.208203  0.211960  
-Wood_Deck_SF        0.016974   0.000882    0.327143  -0.144560  0.034529  
-Open_Porch_SF       0.033651  -0.037467    0.312951  -0.095491  0.087910  
-Enclosed_Porch     -0.021324  -0.000505   -0.128787   0.140129 -0.095854  
-Three_season_porch  0.027229   0.022668    0.032225   0.023723  0.004271  
-Screen_Porch        0.028169  -0.006116    0.112151   0.048319  0.018962  
-Pool_Area          -0.042223  -0.052541    0.068403  -0.001729 -0.013976  
-Misc_Val            0.007333   0.008574   -0.015691   0.008715 -0.011554  
-Mo_Sold             1.000000  -0.155554    0.035259   0.038735  0.043667  
-Year_Sold          -0.155554   1.000000   -0.030569   0.003935 -0.011345  
-Sale_Price          0.035259  -0.030569    1.000000  -0.251397  0.290891  
-Longitude           0.038735   0.003935   -0.251397   1.000000  0.030089  
-Latitude            0.043667  -0.011345    0.290891   0.030089  1.000000  
+                    Mo_Sold  Year_Sold  Sale_Price  Longitude  Latitude  
+Lot_Frontage           0.02      -0.01        0.20      -0.02      0.05  
+Lot_Area               0.00      -0.02        0.27      -0.10     -0.04  
+Year_Built             0.01      -0.01        0.56      -0.43      0.25  
+Year_Remod_Add         0.02       0.03        0.53      -0.32      0.18  
+Mas_Vnr_Area          -0.00      -0.02        0.50      -0.08      0.22  
+BsmtFin_SF_1           0.02      -0.04       -0.13       0.06      0.01  
+BsmtFin_SF_2          -0.01       0.01        0.01      -0.03     -0.02  
+Bsmt_Unf_SF            0.02      -0.04        0.18      -0.05      0.16  
+Total_Bsmt_SF          0.02      -0.01        0.63      -0.16      0.18  
+First_Flr_SF           0.04      -0.01        0.62      -0.14      0.13  
+Second_Flr_SF          0.01      -0.02        0.27      -0.05      0.10  
+Gr_Liv_Area            0.04      -0.03        0.71      -0.14      0.18  
+Bsmt_Full_Bath        -0.00       0.04        0.28      -0.11     -0.02  
+Bsmt_Half_Bath         0.02      -0.02       -0.04       0.05     -0.04  
+Full_Bath              0.05      -0.00        0.55      -0.23      0.21  
+Half_Bath             -0.00       0.00        0.29      -0.12      0.17  
+Bedroom_AbvGr          0.05      -0.02        0.14      -0.04      0.02  
+Kitchen_AbvGr          0.04       0.04       -0.12       0.07     -0.07  
+TotRms_AbvGrd          0.04      -0.03        0.50      -0.09      0.15  
+Fireplaces             0.03      -0.01        0.47      -0.06      0.15  
+Garage_Cars            0.05      -0.02        0.65      -0.22      0.26  
+Garage_Area            0.04      -0.01        0.64      -0.21      0.21  
+Wood_Deck_SF           0.02       0.00        0.33      -0.14      0.03  
+Open_Porch_SF          0.03      -0.04        0.31      -0.10      0.09  
+Enclosed_Porch        -0.02      -0.00       -0.13       0.14     -0.10  
+Three_season_porch     0.03       0.02        0.03       0.02      0.00  
+Screen_Porch           0.03      -0.01        0.11       0.05      0.02  
+Pool_Area             -0.04      -0.05        0.07      -0.00     -0.01  
+Misc_Val               0.01       0.01       -0.02       0.01     -0.01  
+Mo_Sold                1.00      -0.16        0.04       0.04      0.04  
+Year_Sold             -0.16       1.00       -0.03       0.00     -0.01  
+Sale_Price             0.04      -0.03        1.00      -0.25      0.29  
+Longitude              0.04       0.00       -0.25       1.00      0.03  
+Latitude               0.04      -0.01        0.29       0.03      1.00  
 
 [34 rows x 34 columns]</code></pre>
 </div>
@@ -1394,7 +1394,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> select(_.MS_SubClass, _.Overall_Cond, _.Lot_Area, _.Sale_Price) <span class="op">&gt;&gt;</span> <span class="bu">filter</span>((_.Lot_Area <span class="op">==</span> _.Lot_Area.<span class="bu">min</span>()) <span class="op">|</span> (_.Lot_Area <span class="op">==</span> _.Lot_Area.<span class="bu">max</span>()))</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="59">
 <div>
 
 
@@ -1437,7 +1437,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>La correlación entre el tamaño de los lotes o área de las casas de Ames y su precio de venta es 0.27</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="60">
 <pre><code>0.27</code></pre>
 </div>
 </div>
@@ -1451,7 +1451,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="61">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1463,7 +1463,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>La correlación entre el año de construcción / remodelación y su precio de venta es 0.53</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="62">
 <pre><code>0.53</code></pre>
 </div>
 </div>
@@ -1477,7 +1477,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="63">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1489,7 +1489,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>La correlación entre el número de baños completos en las casas de Ames y su precio de venta es 0.55</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="64">
 <pre><code>0.55</code></pre>
 </div>
 </div>
@@ -1503,7 +1503,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-22-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="65">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1515,7 +1515,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>La correlación entre el número de carros que caben en el garage de las casas de Ames y su precio de venta es 0.65</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="66">
 <pre><code>0.65</code></pre>
 </div>
 </div>
@@ -1529,7 +1529,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-24-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div class="cell-output cell-output-display" data-execution_count="67">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1548,7 +1548,7 @@ Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
 <div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables categóricas</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>ames[<span class="st">'Neighborhood'</span>].value_counts()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="68">
 <pre><code>Neighborhood
 North_Ames                                 443
 College_Creek                              267
@@ -1590,7 +1590,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a> summarize(Mean_Sale_Price <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">0</span>) ) <span class="op">&gt;&gt;</span></span>
 <span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a> arrange(<span class="op">-</span>_.Mean_Sale_Price)</span>
 <span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="69">
 <div>
 
 
@@ -1606,142 +1606,142 @@ Name: count, dtype: int64</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">17</td>
 <td>Northridge</td>
-<td>330319.0</td>
+<td>330319.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">25</td>
 <td>Stone_Brook</td>
-<td>324229.0</td>
+<td>324229.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">18</td>
 <td>Northridge_Heights</td>
-<td>322018.0</td>
+<td>322018.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">9</td>
 <td>Green_Hills</td>
-<td>280000.0</td>
+<td>280000.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">27</td>
 <td>Veenker</td>
-<td>248315.0</td>
+<td>248315.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">26</td>
 <td>Timberland</td>
-<td>246600.0</td>
+<td>246600.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">23</td>
 <td>Somerset</td>
-<td>229707.0</td>
+<td>229707.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">4</td>
 <td>Clear_Creek</td>
-<td>208662.0</td>
+<td>208662.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">6</td>
 <td>Crawford</td>
-<td>207551.0</td>
+<td>207551.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">5</td>
 <td>College_Creek</td>
-<td>201803.0</td>
+<td>201803.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>Bloomington_Heights</td>
-<td>196662.0</td>
+<td>196662.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">10</td>
 <td>Greens</td>
-<td>193531.0</td>
+<td>193531.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">8</td>
 <td>Gilbert</td>
-<td>190647.0</td>
+<td>190647.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">19</td>
 <td>Northwest_Ames</td>
-<td>188407.0</td>
+<td>188407.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">22</td>
 <td>Sawyer_West</td>
-<td>184070.0</td>
+<td>184070.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">14</td>
 <td>Mitchell</td>
-<td>162227.0</td>
+<td>162227.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">15</td>
 <td>North_Ames</td>
-<td>145097.0</td>
+<td>145097.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>Blueste</td>
-<td>143590.0</td>
+<td>143590.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">16</td>
 <td>Northpark_Villa</td>
-<td>140711.0</td>
+<td>140711.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">12</td>
 <td>Landmark</td>
-<td>137000.0</td>
+<td>137000.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">21</td>
 <td>Sawyer</td>
-<td>136751.0</td>
+<td>136751.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">24</td>
 <td>South_and_West_of_Iowa_State_University</td>
-<td>135072.0</td>
+<td>135072.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">7</td>
 <td>Edwards</td>
-<td>130843.0</td>
+<td>130843.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>Brookside</td>
-<td>124756.0</td>
+<td>124756.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">20</td>
 <td>Old_Town</td>
-<td>123992.0</td>
+<td>123992.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">2</td>
 <td>Briardale</td>
-<td>105608.0</td>
+<td>105608.00</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">11</td>
 <td>Iowa_DOT_and_Rail_Road</td>
-<td>103753.0</td>
+<td>103753.00</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">13</td>
 <td>Meadow_Village</td>
-<td>95756.0</td>
+<td>95756.00</td>
 </tr>
 </tbody>
 </table>
@@ -1758,7 +1758,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    summarize(Q1 <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.25</span>), MEDIA <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">1</span>), MEDIANA <span class="op">=</span> _.Sale_Price.median().<span class="bu">round</span>(<span class="dv">1</span>), Q3 <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.75</span>), STDEV <span class="op">=</span> _.Sale_Price.std().<span class="bu">round</span>(<span class="dv">1</span>)) <span class="op">&gt;&gt;</span></span>
 <span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>    mutate(SESGO <span class="op">=</span> if_else(_.MEDIA <span class="op">&gt;</span> _.MEDIANA, <span class="st">"DERECHA"</span>, <span class="st">"IZQUIERDA"</span>))</span>
 <span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display" data-execution_count="70">
 <div>
 
 
@@ -1780,90 +1780,90 @@ Name: count, dtype: int64</code></pre>
 <td data-quarto-table-cell-role="th">0</td>
 <td>Above_Average</td>
 <td>123000.00</td>
-<td>150377.9</td>
-<td>142500.0</td>
-<td>170000.0</td>
-<td>50557.8</td>
+<td>150377.90</td>
+<td>142500.00</td>
+<td>170000.00</td>
+<td>50557.80</td>
 <td>DERECHA</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>Average</td>
 <td>145025.00</td>
-<td>206027.0</td>
-<td>187000.0</td>
-<td>245262.5</td>
-<td>87026.5</td>
+<td>206027.00</td>
+<td>187000.00</td>
+<td>245262.50</td>
+<td>87026.50</td>
 <td>DERECHA</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>Below_Average</td>
 <td>88000.00</td>
-<td>120923.9</td>
-<td>115000.0</td>
-<td>146000.0</td>
-<td>44730.4</td>
+<td>120923.90</td>
+<td>115000.00</td>
+<td>146000.00</td>
+<td>44730.40</td>
 <td>DERECHA</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>Excellent</td>
 <td>140000.00</td>
-<td>199765.9</td>
-<td>168000.0</td>
-<td>263400.0</td>
-<td>88072.4</td>
+<td>199765.90</td>
+<td>168000.00</td>
+<td>263400.00</td>
+<td>88072.40</td>
 <td>DERECHA</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>Fair</td>
 <td>67250.00</td>
-<td>95994.0</td>
-<td>84500.0</td>
-<td>115050.0</td>
-<td>38804.5</td>
+<td>95994.00</td>
+<td>84500.00</td>
+<td>115050.00</td>
+<td>38804.50</td>
 <td>DERECHA</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">5</td>
 <td>Good</td>
 <td>122925.00</td>
-<td>153002.0</td>
-<td>139700.0</td>
-<td>168500.0</td>
-<td>49042.6</td>
+<td>153002.00</td>
+<td>139700.00</td>
+<td>168500.00</td>
+<td>49042.60</td>
 <td>DERECHA</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">6</td>
 <td>Poor</td>
 <td>69375.00</td>
-<td>116062.1</td>
-<td>86000.0</td>
-<td>111250.0</td>
-<td>104754.0</td>
+<td>116062.10</td>
+<td>86000.00</td>
+<td>111250.00</td>
+<td>104754.00</td>
 <td>DERECHA</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">7</td>
 <td>Very_Good</td>
 <td>126793.75</td>
-<td>154775.5</td>
-<td>141750.0</td>
-<td>167125.0</td>
-<td>51784.6</td>
+<td>154775.50</td>
+<td>141750.00</td>
+<td>167125.00</td>
+<td>51784.60</td>
 <td>DERECHA</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">8</td>
 <td>Very_Poor</td>
 <td>58000.00</td>
-<td>69981.3</td>
-<td>62500.0</td>
-<td>79184.5</td>
-<td>20092.9</td>
+<td>69981.30</td>
+<td>62500.00</td>
+<td>79184.50</td>
+<td>20092.90</td>
 <td>DERECHA</td>
 </tr>
 </tbody>
@@ -1886,7 +1886,7 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="27">
+<div class="cell-output cell-output-display" data-execution_count="71">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1899,7 +1899,7 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-29-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="72">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1912,7 +1912,7 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-30-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="29">
+<div class="cell-output cell-output-display" data-execution_count="73">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1925,7 +1925,7 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-31-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div class="cell-output cell-output-display" data-execution_count="74">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1939,7 +1939,7 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div class="cell-output cell-output-display" data-execution_count="75">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -1959,7 +1959,7 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-display" data-execution_count="76">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -2104,108 +2104,108 @@ memory usage: 128.3+ KB</code></pre>
 <span id="cb62-20"><a href="#cb62-20" aria-hidden="true" tabindex="-1"></a>transformed_df.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      Total_Bsmt_SF  Gr_Liv_Area  Year_Remod_Add  First_Flr_SF  Garage_Cars  \
-0         -0.981450    -0.489850        1.084460     -1.365036     0.308118   
-1          1.177934     0.125086        0.988539      1.019965     0.308118   
-2         -1.193697     0.548225       -0.977858     -0.075709     0.308118   
-3         -0.967608    -0.762715       -1.601350     -0.124122     0.308118   
-4          0.255120    -0.230825        1.036500      0.561311     0.308118   
+0             -0.98        -0.49            1.08         -1.37         0.31   
+1              1.18         0.13            0.99          1.02         0.31   
+2             -1.19         0.55           -0.98         -0.08         0.31   
+3             -0.97        -0.76           -1.60         -0.12         0.31   
+4              0.26        -0.23            1.04          0.56         0.31   
 ...             ...          ...             ...           ...          ...   
-2339      -1.163706    -0.802261       -0.690093     -1.566334    -2.322954   
-2340       1.637034     0.518566        0.940578      1.527033     0.308118   
-2341      -0.651544    -1.401379       -1.649310     -0.947151    -1.007418   
-2342      -0.185523     1.770188        0.700773      0.785542     0.308118   
-2343      -0.896090     1.659460       -1.649310      0.665782     0.308118   
+2339          -1.16        -0.80           -0.69         -1.57        -2.32   
+2340           1.64         0.52            0.94          1.53         0.31   
+2341          -0.65        -1.40           -1.65         -0.95        -1.01   
+2342          -0.19         1.77            0.70          0.79         0.31   
+2343          -0.90         1.66           -1.65          0.67         0.31   
 
       Overall_Cond_Average  Overall_Cond_Below_Average  \
-0                      1.0                         0.0   
-1                      1.0                         0.0   
-2                      1.0                         0.0   
-3                      1.0                         0.0   
-4                      0.0                         0.0   
+0                     1.00                        0.00   
+1                     1.00                        0.00   
+2                     1.00                        0.00   
+3                     1.00                        0.00   
+4                     0.00                        0.00   
 ...                    ...                         ...   
-2339                   0.0                         1.0   
-2340                   1.0                         0.0   
-2341                   1.0                         0.0   
-2342                   1.0                         0.0   
-2343                   1.0                         0.0   
+2339                  0.00                        1.00   
+2340                  1.00                        0.00   
+2341                  1.00                        0.00   
+2342                  1.00                        0.00   
+2343                  1.00                        0.00   
 
       Overall_Cond_Excellent  Overall_Cond_Fair  Overall_Cond_Good  ...  \
-0                        0.0                0.0                0.0  ...   
-1                        0.0                0.0                0.0  ...   
-2                        0.0                0.0                0.0  ...   
-3                        0.0                0.0                0.0  ...   
-4                        0.0                0.0                1.0  ...   
+0                       0.00               0.00               0.00  ...   
+1                       0.00               0.00               0.00  ...   
+2                       0.00               0.00               0.00  ...   
+3                       0.00               0.00               0.00  ...   
+4                       0.00               0.00               1.00  ...   
 ...                      ...                ...                ...  ...   
-2339                     0.0                0.0                0.0  ...   
-2340                     0.0                0.0                0.0  ...   
-2341                     0.0                0.0                0.0  ...   
-2342                     0.0                0.0                0.0  ...   
-2343                     0.0                0.0                0.0  ...   
+2339                    0.00               0.00               0.00  ...   
+2340                    0.00               0.00               0.00  ...   
+2341                    0.00               0.00               0.00  ...   
+2342                    0.00               0.00               0.00  ...   
+2343                    0.00               0.00               0.00  ...   
 
       Neighborhood_Northridge_Heights  Neighborhood_Northwest_Ames  \
-0                                 0.0                          0.0   
-1                                 1.0                          0.0   
-2                                 0.0                          0.0   
-3                                 0.0                          0.0   
-4                                 0.0                          1.0   
+0                                0.00                         0.00   
+1                                1.00                         0.00   
+2                                0.00                         0.00   
+3                                0.00                         0.00   
+4                                0.00                         1.00   
 ...                               ...                          ...   
-2339                              0.0                          0.0   
-2340                              1.0                          0.0   
-2341                              0.0                          0.0   
-2342                              0.0                          0.0   
-2343                              0.0                          0.0   
+2339                             0.00                         0.00   
+2340                             1.00                         0.00   
+2341                             0.00                         0.00   
+2342                             0.00                         0.00   
+2343                             0.00                         0.00   
 
       Neighborhood_Old_Town  Neighborhood_Sawyer  Neighborhood_Sawyer_West  \
-0                       0.0                  0.0                       0.0   
-1                       0.0                  0.0                       0.0   
-2                       0.0                  0.0                       0.0   
-3                       0.0                  0.0                       0.0   
-4                       0.0                  0.0                       0.0   
+0                      0.00                 0.00                      0.00   
+1                      0.00                 0.00                      0.00   
+2                      0.00                 0.00                      0.00   
+3                      0.00                 0.00                      0.00   
+4                      0.00                 0.00                      0.00   
 ...                     ...                  ...                       ...   
-2339                    0.0                  0.0                       0.0   
-2340                    0.0                  0.0                       0.0   
-2341                    0.0                  0.0                       0.0   
-2342                    0.0                  0.0                       0.0   
-2343                    1.0                  0.0                       0.0   
+2339                   0.00                 0.00                      0.00   
+2340                   0.00                 0.00                      0.00   
+2341                   0.00                 0.00                      0.00   
+2342                   0.00                 0.00                      0.00   
+2343                   1.00                 0.00                      0.00   
 
       Neighborhood_Somerset  \
-0                       1.0   
-1                       0.0   
-2                       0.0   
-3                       0.0   
-4                       0.0   
+0                      1.00   
+1                      0.00   
+2                      0.00   
+3                      0.00   
+4                      0.00   
 ...                     ...   
-2339                    0.0   
-2340                    0.0   
-2341                    0.0   
-2342                    1.0   
-2343                    0.0   
+2339                   0.00   
+2340                   0.00   
+2341                   0.00   
+2342                   1.00   
+2343                   0.00   
 
       Neighborhood_South_and_West_of_Iowa_State_University  \
-0                                                   0.0      
-1                                                   0.0      
-2                                                   0.0      
-3                                                   0.0      
-4                                                   0.0      
+0                                                  0.00      
+1                                                  0.00      
+2                                                  0.00      
+3                                                  0.00      
+4                                                  0.00      
 ...                                                 ...      
-2339                                                0.0      
-2340                                                0.0      
-2341                                                0.0      
-2342                                                0.0      
-2343                                                0.0      
+2339                                               0.00      
+2340                                               0.00      
+2341                                               0.00      
+2342                                               0.00      
+2343                                               0.00      
 
       Neighborhood_Stone_Brook  Neighborhood_Timberland  Neighborhood_Veenker  
-0                          0.0                      0.0                   0.0  
-1                          0.0                      0.0                   0.0  
-2                          0.0                      0.0                   0.0  
-3                          0.0                      0.0                   0.0  
-4                          0.0                      0.0                   0.0  
+0                         0.00                     0.00                  0.00  
+1                         0.00                     0.00                  0.00  
+2                         0.00                     0.00                  0.00  
+3                         0.00                     0.00                  0.00  
+4                         0.00                     0.00                  0.00  
 ...                        ...                      ...                   ...  
-2339                       0.0                      0.0                   0.0  
-2340                       0.0                      0.0                   0.0  
-2341                       0.0                      0.0                   0.0  
-2342                       0.0                      0.0                   0.0  
-2343                       0.0                      0.0                   0.0  
+2339                      0.00                     0.00                  0.00  
+2340                      0.00                     0.00                  0.00  
+2341                      0.00                     0.00                  0.00  
+2342                      0.00                     0.00                  0.00  
+2343                      0.00                     0.00                  0.00  
 
 [2344 rows x 40 columns]
 &lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -2271,7 +2271,7 @@ memory usage: 732.6 KB</code></pre>
 <span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> pipeline.fit(ames_train_selected, ames_y_train)</span>
 <span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">'''results es un objeto que contiene toda la</span></span>
 <span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">información de cómo se debe comportar el modelo'''</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div class="cell-output cell-output-display" data-execution_count="81">
 <pre><code>'results es un objeto que contiene toda la\ninformación de cómo se debe comportar el modelo'</code></pre>
 </div>
 </div>
@@ -2293,7 +2293,7 @@ memory usage: 732.6 KB</code></pre>
 <span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a>ames_test <span class="op">&gt;&gt;</span></span>
 <span id="cb66-13"><a href="#cb66-13" aria-hidden="true" tabindex="-1"></a>  select(_.Sale_Price, _.Sale_Price_Pred)</span>
 <span id="cb66-14"><a href="#cb66-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="82">
 <div>
 
 
@@ -2309,27 +2309,27 @@ memory usage: 732.6 KB</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">390</td>
 <td>165000</td>
-<td>158121.511000</td>
+<td>158121.51</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1235</td>
 <td>124000</td>
-<td>126768.848598</td>
+<td>126768.85</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2288</td>
 <td>75000</td>
-<td>96143.356006</td>
+<td>96143.36</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">107</td>
 <td>206000</td>
-<td>203350.818016</td>
+<td>203350.82</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">1861</td>
 <td>190000</td>
-<td>243694.682581</td>
+<td>243694.68</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">...</td>
@@ -2339,27 +2339,27 @@ memory usage: 732.6 KB</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">116</td>
 <td>171000</td>
-<td>163917.913733</td>
+<td>163917.91</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">398</td>
 <td>120500</td>
-<td>120095.746539</td>
+<td>120095.75</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">1253</td>
 <td>146000</td>
-<td>208396.365801</td>
+<td>208396.37</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">78</td>
 <td>125000</td>
-<td>105909.113777</td>
+<td>105909.11</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">714</td>
 <td>110000</td>
-<td>104347.790875</td>
+<td>104347.79</td>
 </tr>
 </tbody>
 </table>
@@ -2374,7 +2374,7 @@ memory usage: 732.6 KB</code></pre>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(ames_y_train, X_train_with_intercept).fit()</span>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>model.summary()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="83">
 <table class="simpletable table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>OLS Regression Results</caption>
 <tbody>
@@ -2404,7 +2404,7 @@ memory usage: 732.6 KB</code></pre>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Time:</td>
-<td>20:25:53</td>
+<td>20:29:41</td>
 <td data-quarto-table-cell-role="th">Log-Likelihood:</td>
 <td>-27763.</td>
 </tr>
@@ -2888,7 +2888,7 @@ memory usage: 732.6 KB</code></pre>
 <span id="cb68-21"><a href="#cb68-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-22"><a href="#cb68-22" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="op">=</span> pd.DataFrame(metrics_data)</span>
 <span id="cb68-23"><a href="#cb68-23" aria-hidden="true" tabindex="-1"></a>metrics_df</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="40">
+<div class="cell-output cell-output-display" data-execution_count="84">
 <div>
 
 
@@ -2965,7 +2965,7 @@ memory usage: 732.6 KB</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-42-output-2.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="41">
+<div class="cell-output cell-output-display" data-execution_count="85">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -2987,7 +2987,7 @@ memory usage: 732.6 KB</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-43-output-2.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="42">
+<div class="cell-output cell-output-display" data-execution_count="86">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -3005,7 +3005,7 @@ memory usage: 732.6 KB</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-44-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="43">
+<div class="cell-output cell-output-display" data-execution_count="87">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
@@ -3026,7 +3026,7 @@ memory usage: 732.6 KB</code></pre>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-45-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="44">
+<div class="cell-output cell-output-display" data-execution_count="88">
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
