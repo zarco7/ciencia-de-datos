@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Gerardo Luna y Pedro Castellon">
+<meta name="author" content="Gerardo Luna y Pedro Castellón">
 
-<title>analisis_ames</title>
+<title>proyecto_final_v1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,26 +85,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#análisis-exploratorio-de-la-base-ames.csv" id="toc-análisis-exploratorio-de-la-base-ames.csv" class="nav-link active" data-scroll-target="#análisis-exploratorio-de-la-base-ames.csv">Análisis exploratorio de la base ames.csv</a>
+  <li><a href="#proyecto-análisis-de-la-base-ames.csv-para-predicción-de-precios-de-venta" id="toc-proyecto-análisis-de-la-base-ames.csv-para-predicción-de-precios-de-venta" class="nav-link active" data-scroll-target="#proyecto-análisis-de-la-base-ames.csv-para-predicción-de-precios-de-venta"><strong>Proyecto Análisis de la base ames.csv para predicción de precios de venta</strong></a>
   <ul class="collapse">
-  <li><a href="#objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa." id="toc-objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa." class="nav-link" data-scroll-target="#objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa.">1. Objetivo: Predicción de los precios de venta de hogares en Ames, Iowa.</a></li>
-  <li><a href="#eda-análisis-exploratorio-de-datos." id="toc-eda-análisis-exploratorio-de-datos." class="nav-link" data-scroll-target="#eda-análisis-exploratorio-de-datos.">2. EDA: Análisis exploratorio de datos.</a></li>
-  <li><a href="#librerías" id="toc-librerías" class="nav-link" data-scroll-target="#librerías">2.1 Librerías:</a></li>
-  <li><a href="#eda-y-geda" id="toc-eda-y-geda" class="nav-link" data-scroll-target="#eda-y-geda">2.2 EDA y GEDA</a></li>
-  <li><a href="#descripción-de-los-campos." id="toc-descripción-de-los-campos." class="nav-link" data-scroll-target="#descripción-de-los-campos.">2.2.1 Descripción de los campos.</a></li>
-  <li><a href="#variables-numéricas.-los-estadísticos-generales-para-sale_price-son-los-siguientes" id="toc-variables-numéricas.-los-estadísticos-generales-para-sale_price-son-los-siguientes" class="nav-link" data-scroll-target="#variables-numéricas.-los-estadísticos-generales-para-sale_price-son-los-siguientes">2.2.2 Variables numéricas. Los estadísticos generales para Sale_Price son los siguientes:</a></li>
-  <li><a href="#datos-atípicos" id="toc-datos-atípicos" class="nav-link" data-scroll-target="#datos-atípicos"><strong>Datos atípicos</strong></a></li>
-  <li><a href="#coordenadas-geográficas" id="toc-coordenadas-geográficas" class="nav-link" data-scroll-target="#coordenadas-geográficas"><strong>Coordenadas geográficas</strong></a></li>
-  <li><a href="#variables-categóricas." id="toc-variables-categóricas." class="nav-link" data-scroll-target="#variables-categóricas.">2.2.3 Variables categóricas.</a></li>
-  <li><a href="#barrio-neighborhood" id="toc-barrio-neighborhood" class="nav-link" data-scroll-target="#barrio-neighborhood"><strong>Barrio (Neighborhood)</strong></a></li>
-  <li><a href="#estado-general-overall_cond" id="toc-estado-general-overall_cond" class="nav-link" data-scroll-target="#estado-general-overall_cond"><strong>Estado general (Overall_Cond)</strong></a></li>
-  <li><a href="#area-lot_area" id="toc-area-lot_area" class="nav-link" data-scroll-target="#area-lot_area"><strong>Area (Lot_Area)</strong></a></li>
-  <li><a href="#año-de-construcción-remodelación-year_built-year_remod_add" id="toc-año-de-construcción-remodelación-year_built-year_remod_add" class="nav-link" data-scroll-target="#año-de-construcción-remodelación-year_built-year_remod_add"><strong>Año de construcción / remodelación (Year_Built, Year_Remod_Add)</strong></a></li>
-  <li><a href="#baños-completos-full_bath" id="toc-baños-completos-full_bath" class="nav-link" data-scroll-target="#baños-completos-full_bath"><strong>Baños completos (Full_Bath)</strong></a></li>
-  <li><a href="#tipo-de-casa-house_style" id="toc-tipo-de-casa-house_style" class="nav-link" data-scroll-target="#tipo-de-casa-house_style"><strong>Tipo de casa (House_Style)</strong></a></li>
-  <li><a href="#lugares-de-estacionamiento-garage_cars" id="toc-lugares-de-estacionamiento-garage_cars" class="nav-link" data-scroll-target="#lugares-de-estacionamiento-garage_cars"><strong>Lugares de estacionamiento (Garage_Cars)</strong></a></li>
-  <li><a href="#aire-acondicionado-heating_qc" id="toc-aire-acondicionado-heating_qc" class="nav-link" data-scroll-target="#aire-acondicionado-heating_qc"><strong>Aire acondicionado (Heating_QC)</strong></a></li>
-  <li><a href="#conclusión." id="toc-conclusión." class="nav-link" data-scroll-target="#conclusión.">3. Conclusión.</a></li>
+  <li><a href="#objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa." id="toc-objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa." class="nav-link" data-scroll-target="#objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa."><strong>1. Objetivo: Predicción de los precios de venta de hogares en Ames, Iowa.</strong></a></li>
+  <li><a href="#descripción-de-las-variables" id="toc-descripción-de-las-variables" class="nav-link" data-scroll-target="#descripción-de-las-variables"><strong>3. Descripción de las variables</strong></a></li>
+  <li><a href="#exploración-de-datos" id="toc-exploración-de-datos" class="nav-link" data-scroll-target="#exploración-de-datos"><strong>4. Exploración de datos</strong></a>
+  <ul class="collapse">
+  <li><a href="#librerías" id="toc-librerías" class="nav-link" data-scroll-target="#librerías">4.1 Librerías</a></li>
+  <li><a href="#tipo-de-datos-de-cada-una-de-las-variables" id="toc-tipo-de-datos-de-cada-una-de-las-variables" class="nav-link" data-scroll-target="#tipo-de-datos-de-cada-una-de-las-variables">4.2 Tipo de datos de cada una de las variables</a></li>
+  <li><a href="#variable-numérica-a-predecir.-los-estadísticos-generales-para-sale_price-son-los-siguientes" id="toc-variable-numérica-a-predecir.-los-estadísticos-generales-para-sale_price-son-los-siguientes" class="nav-link" data-scroll-target="#variable-numérica-a-predecir.-los-estadísticos-generales-para-sale_price-son-los-siguientes">4.3. Variable numérica a predecir. Los estadísticos generales para Sale_Price son los siguientes:</a></li>
+  <li><a href="#datos-atípicos-en-la-variable-a-predecir" id="toc-datos-atípicos-en-la-variable-a-predecir" class="nav-link" data-scroll-target="#datos-atípicos-en-la-variable-a-predecir">4.3.1 Datos atípicos en la variable a predecir</a></li>
+  <li><a href="#variable-coordenadas-geográficas" id="toc-variable-coordenadas-geográficas" class="nav-link" data-scroll-target="#variable-coordenadas-geográficas">4.4 Variable Coordenadas geográficas</a></li>
+  <li><a href="#análisis-de-correlaciones-de-variables-numéricas" id="toc-análisis-de-correlaciones-de-variables-numéricas" class="nav-link" data-scroll-target="#análisis-de-correlaciones-de-variables-numéricas">4.5 Análisis de correlaciones de variables numéricas</a></li>
+  <li><a href="#variables-categóricas" id="toc-variables-categóricas" class="nav-link" data-scroll-target="#variables-categóricas">4.6 Variables categóricas</a></li>
+  </ul></li>
+  <li><a href="#modelo-de-regresión-lineal-múltiple" id="toc-modelo-de-regresión-lineal-múltiple" class="nav-link" data-scroll-target="#modelo-de-regresión-lineal-múltiple"><strong>5. Modelo de regresión lineal múltiple</strong></a>
+  <ul class="collapse">
+  <li><a href="#condiciones-para-el-ajuste-de-una-regresión-lineal" id="toc-condiciones-para-el-ajuste-de-una-regresión-lineal" class="nav-link" data-scroll-target="#condiciones-para-el-ajuste-de-una-regresión-lineal">5.1 Condiciones para el ajuste de una regresión lineal:</a></li>
+  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering">5.2 Feature Engineering</a></li>
+  <li><a href="#transformación-de-columnas" id="toc-transformación-de-columnas" class="nav-link" data-scroll-target="#transformación-de-columnas">5.4 Transformación de columnas</a></li>
+  <li><a href="#pipeline-y-modelado-utilizaremos-fit-y-predict" id="toc-pipeline-y-modelado-utilizaremos-fit-y-predict" class="nav-link" data-scroll-target="#pipeline-y-modelado-utilizaremos-fit-y-predict">5.5 Pipeline y modelado Utilizaremos fit y predict</a></li>
+  <li><a href="#predicciones-y-coeficientes-de-regresión" id="toc-predicciones-y-coeficientes-de-regresión" class="nav-link" data-scroll-target="#predicciones-y-coeficientes-de-regresión">5.6 Predicciones y coeficientes de regresión</a></li>
+  <li><a href="#métricas-de-desempeño-con-variables-no-fusionadas" id="toc-métricas-de-desempeño-con-variables-no-fusionadas" class="nav-link" data-scroll-target="#métricas-de-desempeño-con-variables-no-fusionadas">5.7 Métricas de desempeño con variables no fusionadas</a></li>
+  <li><a href="#gráficos-de-desempeño-del-modelo" id="toc-gráficos-de-desempeño-del-modelo" class="nav-link" data-scroll-target="#gráficos-de-desempeño-del-modelo">5.8 Gráficos de desempeño del modelo</a></li>
+  </ul></li>
+  <li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones"><strong>6. Conclusiones</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -115,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">analisis_ames</h1>
+<h1 class="title">proyecto_final_v1</h1>
 </div>
 
 
@@ -123,16 +128,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Elaborado por</div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>Gerardo Luna y Pedro Castellon </p>
+             <p>Gerardo Luna y Pedro Castellón </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">30 de septiembre de 2023</p>
+      <p class="date">21 de octubre de 2023</p>
     </div>
   </div>
   
@@ -142,44 +147,374 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="análisis-exploratorio-de-la-base-ames.csv" class="level2">
-<h2 class="anchored" data-anchor-id="análisis-exploratorio-de-la-base-ames.csv">Análisis exploratorio de la base ames.csv</h2>
-<section id="objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa." class="level3">
-<h3 class="anchored" data-anchor-id="objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa.">1. Objetivo: Predicción de los precios de venta de hogares en Ames, Iowa.</h3>
-<p>El objetivo es desarrollar un modelo que prediga el precio de venta de una determinada casa en Ames, Iowa. Los interesados en el informe esperan conocer si el precio al que se ofrece una casa está por encima o por debajo de su valor real. Se espera que aquellas subvaluadas representen una oportunidad de inversión.</p>
-<p><span class="math inline">\(y = mx + b\)</span></p>
+<section id="proyecto-análisis-de-la-base-ames.csv-para-predicción-de-precios-de-venta" class="level1">
+<h1><strong>Proyecto Análisis de la base ames.csv para predicción de precios de venta</strong></h1>
+<section id="objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa." class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-predicción-de-los-precios-de-venta-de-hogares-en-ames-iowa."><strong>1. Objetivo: Predicción de los precios de venta de hogares en Ames, Iowa.</strong></h2>
+<p>El objetivo es desarrollar un modelo que prediga el precio de venta de una determinada casa en Ames, Iowa. Se asume, para este proyecto final de Introducción a la Ciencia de Datos, AMAT, que los interesados en el informe esperan conocer si el precio al que se ofrece una casa está por encima o por debajo de su valor real. Se espera que aquellas subvaluadas representen una oportunidad de inversión.</p>
+<p>Para llevar a cabo una predicción del precio de venta, lo más precisa posible, es necesario aplicar las herramientas de Machine Learning que van desde el conocimiento del contenido, y contexto de la información, complementarla en caso necesario, hasta un análisis exploratorio (EDA y GEDA), desarrollo de hipótesis, implementación de algoritmos y modelos matemáticos.</p>
+<p>Destacamos en el análisis exploratorio los siguientes puntos que deberemos alcanzar en este proyecto:</p>
+<ol type="1">
+<li><p>Maximizar el conocimiento de nuestro conjunto de datos (base ames.csv).</p></li>
+<li><p>Descubrir la estructura subyacente de los datos.</p></li>
+<li><p>Extraer variables importantes.</p></li>
+<li><p>Detectar valores atípicos y anomalías.</p></li>
+<li><p>Probar los supuestos subyacentes.</p>
+<h2 id="contexto-de-los-datos" class="anchored"><strong>2. Contexto de los datos</strong></h2></li>
+</ol>
+<p>La base de datos que se requiere se encuentra contenida en el archivo ames.csv. El presente proyecto desarrolla el modelo de predicción, fundamentado a su vez en predictores numéricos y categóricos correspondientes a diferentes características de las viviendas de Ames, Iowa.</p>
+<p>El archivo ames.csv contiene 74 variables, como se indicó, tanto numéricas como categóricas, y 2,930 registros.</p>
 </section>
-<section id="eda-análisis-exploratorio-de-datos." class="level3">
-<h3 class="anchored" data-anchor-id="eda-análisis-exploratorio-de-datos.">2. EDA: Análisis exploratorio de datos.</h3>
-<p>La base de datos que se requiere se encuentra contenida en el archivo ames.csv. En el archivo análisis_ames.py se desarrolla el modelo de predicción y en él mismo se plasma el código, en el presente documento se muestran los resultados.</p>
+<section id="descripción-de-las-variables" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-de-las-variables"><strong>3. Descripción de las variables</strong></h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MS_SubClass</td>
+<td>Características de la vivienda</td>
+</tr>
+<tr class="even">
+<td>MS_Zoning</td>
+<td>Zona en que se encuentra</td>
+</tr>
+<tr class="odd">
+<td>Lot_Frontage</td>
+<td>Medida del frente en pies</td>
+</tr>
+<tr class="even">
+<td>Lot_Area</td>
+<td>Superficie en pies cuadrados</td>
+</tr>
+<tr class="odd">
+<td>Street</td>
+<td>Tipo de camino de acceso</td>
+</tr>
+<tr class="even">
+<td>Alley</td>
+<td>Tipo de callejón</td>
+</tr>
+<tr class="odd">
+<td>Lot_Shape</td>
+<td>Forma de la vivienda</td>
+</tr>
+<tr class="even">
+<td>Land_Contour</td>
+<td>Tipo de superficie</td>
+</tr>
+<tr class="odd">
+<td>Utilities</td>
+<td>Servicios disponibles</td>
+</tr>
+<tr class="even">
+<td>Lot_Config</td>
+<td>Configuración de la vivienda</td>
+</tr>
+<tr class="odd">
+<td>Land_Slope</td>
+<td>Pendiente del terreno</td>
+</tr>
+<tr class="even">
+<td>Neighborhood</td>
+<td>Barrio o colonia</td>
+</tr>
+<tr class="odd">
+<td>Condition_1</td>
+<td>Vialidades adyacentes 1</td>
+</tr>
+<tr class="even">
+<td>Condition_2</td>
+<td>Vialidades adyacentes 2</td>
+</tr>
+<tr class="odd">
+<td>Bldg_Type</td>
+<td>Tipo de construcción</td>
+</tr>
+<tr class="even">
+<td>House_Style</td>
+<td>Tipo de vivienda</td>
+</tr>
+<tr class="odd">
+<td>Overall_Cond</td>
+<td>Estado general</td>
+</tr>
+<tr class="even">
+<td>Year_Built</td>
+<td>Año de construcción</td>
+</tr>
+<tr class="odd">
+<td>Year_Remod_Add</td>
+<td>Año de remodelación</td>
+</tr>
+<tr class="even">
+<td>Roof_Style</td>
+<td>Tipo de techo</td>
+</tr>
+<tr class="odd">
+<td>Roof_Matl</td>
+<td>Material del techo</td>
+</tr>
+<tr class="even">
+<td>Exterior_1st</td>
+<td>Tipo de fachada 1</td>
+</tr>
+<tr class="odd">
+<td>Exterior_2nd</td>
+<td>Tipo de fachada 2</td>
+</tr>
+<tr class="even">
+<td>Mas_Vnr_Type</td>
+<td>Chapa mampostería tipo</td>
+</tr>
+<tr class="odd">
+<td>Mas_Vnr_Area</td>
+<td>Chapa mampostería área</td>
+</tr>
+<tr class="even">
+<td>Exter_Cond</td>
+<td>Calidad de material exterior</td>
+</tr>
+<tr class="odd">
+<td>Foundation</td>
+<td>Tipo de cimientos</td>
+</tr>
+<tr class="even">
+<td>Bsmt_Cond</td>
+<td>Estado del sótano</td>
+</tr>
+<tr class="odd">
+<td>Bsmt_Exposure</td>
+<td>Tipo de exposición del sótano</td>
+</tr>
+<tr class="even">
+<td>BsmtFin_Type_1</td>
+<td>Rating 1 de acabados del sótano</td>
+</tr>
+<tr class="odd">
+<td>BsmtFin_SF_1</td>
+<td>Pies cuadrados del sótano tipo 1</td>
+</tr>
+<tr class="even">
+<td>BsmtFin_Type_2</td>
+<td>Rating 2 de acabados del sótano</td>
+</tr>
+<tr class="odd">
+<td>BsmtFin_SF_2</td>
+<td>Pies cuadrados del sótano tipo 2</td>
+</tr>
+<tr class="even">
+<td>Bsmt_Unf_SF</td>
+<td>Pies cuadrados sin acabados del sótano</td>
+</tr>
+<tr class="odd">
+<td>Total_Bsmt_SF</td>
+<td>Area del sótano en pies cuadrados</td>
+</tr>
+<tr class="even">
+<td>Heating</td>
+<td>Tipo de calefacción</td>
+</tr>
+<tr class="odd">
+<td>Heating_QC</td>
+<td>Calidad y estado de la calefacción</td>
+</tr>
+<tr class="even">
+<td>Central_Air</td>
+<td>Aire acondicionado central</td>
+</tr>
+<tr class="odd">
+<td>Electrical</td>
+<td>Sistema de electricidad</td>
+</tr>
+<tr class="even">
+<td>First_Flr_SF</td>
+<td>Pies cuadrados del primer piso</td>
+</tr>
+<tr class="odd">
+<td>Second_Flr_SF</td>
+<td>Pies cuadrados del segundo piso</td>
+</tr>
+<tr class="even">
+<td>Gr_Liv_Area</td>
+<td>Superficie habitable</td>
+</tr>
+<tr class="odd">
+<td>Bsmt_Full_Bath</td>
+<td>Baños completos en el sótano</td>
+</tr>
+<tr class="even">
+<td>Bsmt_Half_Bath</td>
+<td>Medios baños en el sótano</td>
+</tr>
+<tr class="odd">
+<td>Full_Bath</td>
+<td>Baños completos</td>
+</tr>
+<tr class="even">
+<td>Half_Bath</td>
+<td>Medios baños</td>
+</tr>
+<tr class="odd">
+<td>Bedroom_AbvGr</td>
+<td>Recámaras</td>
+</tr>
+<tr class="even">
+<td>Kitchen_AbvGr</td>
+<td>Cocina</td>
+</tr>
+<tr class="odd">
+<td>TotRms_AbvGrd</td>
+<td>Recámaras</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
+<section id="exploración-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="exploración-de-datos"><strong>4. Exploración de datos</strong></h2>
 <section id="librerías" class="level3">
-<h3 class="anchored" data-anchor-id="librerías">2.1 Librerías:</h3>
+<h3 class="anchored" data-anchor-id="librerías">4.1 Librerías</h3>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> siuba <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plydata <span class="im">as</span> pr</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plydata.tidy <span class="im">import</span> pivot_wider, pivot_longer</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mizani.formatters <span class="im">import</span> comma_format, dollar_format</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mlxtend.feature_selection <span class="im">import</span> ColumnSelector</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> ColumnTransformer</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler, OneHotEncoder</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_error, mean_absolute_percentage_error</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score, make_scorer</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split, KFold, cross_val_score, cross_validate</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plydata.one_table_verbs <span class="im">import</span> pull</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mizani.formatters <span class="im">import</span> comma_format, dollar_format</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### lectura de archivo .csv ####</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">=</span> pd.read_csv(<span class="st">"datos/ames.csv"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">=</span> pd.read_csv(<span class="st">"data/ames.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tamaño de conjunto completo: "</span>, ames.shape)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Tamaño de conjunto completo:  (2930, 74)</code></pre>
+</div>
 </div>
 </section>
-<section id="eda-y-geda" class="level3">
-<h3 class="anchored" data-anchor-id="eda-y-geda">2.2 EDA y GEDA</h3>
-</section>
-<section id="descripción-de-los-campos." class="level3">
-<h3 class="anchored" data-anchor-id="descripción-de-los-campos.">2.2.1 Descripción de los campos.</h3>
-<p>Se cuenta con 74 campos y un total de 2,930 observaciones, en donde se identifica Sale_Price como la variable a predecir.</p>
+<section id="tipo-de-datos-de-cada-una-de-las-variables" class="level3">
+<h3 class="anchored" data-anchor-id="tipo-de-datos-de-cada-una-de-las-variables">4.2 Tipo de datos de cada una de las variables</h3>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Información de cada uno de los campos que integran la base </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ames_housing.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Información del tipo de datos de cada uno de los campos que integran la base </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>ames.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 2930 entries, 0 to 2929
@@ -265,19 +600,19 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 </div>
 </section>
-<section id="variables-numéricas.-los-estadísticos-generales-para-sale_price-son-los-siguientes" class="level3">
-<h3 class="anchored" data-anchor-id="variables-numéricas.-los-estadísticos-generales-para-sale_price-son-los-siguientes">2.2.2 Variables numéricas. Los estadísticos generales para Sale_Price son los siguientes:</h3>
+<section id="variable-numérica-a-predecir.-los-estadísticos-generales-para-sale_price-son-los-siguientes" class="level3">
+<h3 class="anchored" data-anchor-id="variable-numérica-a-predecir.-los-estadísticos-generales-para-sale_price-son-los-siguientes">4.3. Variable numérica a predecir. Los estadísticos generales para Sale_Price son los siguientes:</h3>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> select(_.Sale_Price) <span class="op">&gt;&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> summarize(</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  Mean_Sale_Price <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  Median_Sale_Price <span class="op">=</span> _.Sale_Price.median().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  Std_Sale_Price <span class="op">=</span> _.Sale_Price.std().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  Kurtosis_Sale_Price <span class="op">=</span> _.Sale_Price.kurtosis().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> select(_.Sale_Price) <span class="op">&gt;&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> summarize(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  Mean_Sale_Price <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  Median_Sale_Price <span class="op">=</span> _.Sale_Price.median().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  Std_Sale_Price <span class="op">=</span> _.Sale_Price.std().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  Kurtosis_Sale_Price <span class="op">=</span> _.Sale_Price.kurtosis().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
@@ -307,15 +642,15 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> select(_.Sale_Price) <span class="op">&gt;&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> summarize(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  Asimetria_Sale_Price <span class="op">=</span> _.Sale_Price.skew().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  Max_Sale_Price <span class="op">=</span> _.Sale_Price.<span class="bu">max</span>().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  Min_Sale_Price <span class="op">=</span> _.Sale_Price.<span class="bu">min</span>().<span class="bu">round</span>(<span class="dv">1</span>),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> select(_.Sale_Price) <span class="op">&gt;&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> summarize(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  Asimetria_Sale_Price <span class="op">=</span> _.Sale_Price.skew().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  Max_Sale_Price <span class="op">=</span> _.Sale_Price.<span class="bu">max</span>().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  Min_Sale_Price <span class="op">=</span> _.Sale_Price.<span class="bu">min</span>().<span class="bu">round</span>(<span class="dv">1</span>),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
@@ -343,15 +678,15 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> select(_.Sale_Price) <span class="op">&gt;&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> summarize(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  Q1_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.25</span>),</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  Q2_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.5</span>),</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  Q3_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.75</span>),</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> select(_.Sale_Price) <span class="op">&gt;&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a> summarize(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  Q1_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.25</span>),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  Q2_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.5</span>),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  Q3_Sale_Price <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.75</span>),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
@@ -380,15 +715,15 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 <p>Se trata de una distribución de datos leptocúrtica (de forma puntiaguda) y la asimetría, que es positiva, indica que el gráfico tiene cola hacia la derecha. Los datos de bigotes los usaremos en el gráfico de caja (boxplot). Siendo la media mayor que la mediana, se infiere que los datos están sesgados positivamente debido a que hay valores muy altos que tiran o jalan la media hacia arriba.</p>
 <div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histograma Sale_Price</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  geom_histogram(color <span class="op">=</span> <span class="st">"pink"</span>, fill <span class="op">=</span> <span class="st">"blue"</span>, bins<span class="op">=</span><span class="dv">30</span>) <span class="op">+</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  scale_x_continuous(labels<span class="op">=</span>dollar_format()) <span class="op">+</span> </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels<span class="op">=</span>comma_format()) <span class="op">+</span> </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"Distribución de precio"</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histograma Sale_Price</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  geom_histogram(color <span class="op">=</span> <span class="st">"pink"</span>, fill <span class="op">=</span> <span class="st">"blue"</span>, bins<span class="op">=</span><span class="dv">30</span>) <span class="op">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  scale_x_continuous(labels<span class="op">=</span>dollar_format()) <span class="op">+</span> </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels<span class="op">=</span>comma_format()) <span class="op">+</span> </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"Distribución de precio"</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
@@ -398,14 +733,14 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 <p>El gráfico de caja muestra un número importante de datos atípicos por encima de un precio de $338,931.00:</p>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> ggplot() <span class="op">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> geom_boxplot(aes(x <span class="op">=</span> <span class="dv">0</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>), color<span class="op">=</span> <span class="st">"blue"</span>, fill<span class="op">=</span> <span class="st">"lightblue"</span>) <span class="op">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a> scale_y_continuous(labels <span class="op">=</span> dollar_format(prefix<span class="op">=</span><span class="st">'$'</span>, digits<span class="op">=</span><span class="dv">0</span>, big_mark<span class="op">=</span><span class="st">','</span>)) <span class="op">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a> theme(axis_text_x<span class="op">=</span>element_blank()) <span class="op">+</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a> ggtitle(<span class="st">"Distribución de Precio de Venta"</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a> ggplot() <span class="op">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a> geom_boxplot(aes(x <span class="op">=</span> <span class="dv">0</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>), color<span class="op">=</span> <span class="st">"blue"</span>, fill<span class="op">=</span> <span class="st">"lightblue"</span>) <span class="op">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a> scale_y_continuous(labels <span class="op">=</span> dollar_format(prefix<span class="op">=</span><span class="st">'$'</span>, digits<span class="op">=</span><span class="dv">0</span>, big_mark<span class="op">=</span><span class="st">','</span>)) <span class="op">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a> theme(axis_text_x<span class="op">=</span>element_blank()) <span class="op">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a> ggtitle(<span class="st">"Distribución de Precio de Venta"</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
@@ -414,15 +749,15 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 </div>
 </section>
-<section id="datos-atípicos" class="level3">
-<h3 class="anchored" data-anchor-id="datos-atípicos"><strong>Datos atípicos</strong></h3>
+<section id="datos-atípicos-en-la-variable-a-predecir" class="level3">
+<h3 class="anchored" data-anchor-id="datos-atípicos-en-la-variable-a-predecir">4.3.1 Datos atípicos en la variable a predecir</h3>
 <p>Estableciendo como atípicos aquellos datos que están 1.5 veces el RIC por encima del cuartil 3, tenemos lo siguiente:</p>
 <div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>( (_.Sale_Price <span class="op">&gt;</span> <span class="dv">339500</span>) ) <span class="op">&gt;&gt;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  select (_.Overall_Cond, _.Lot_Area, _.Neighborhood, _.Heating_QC, _.Sale_Price) </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>( (_.Sale_Price <span class="op">&gt;</span> <span class="dv">339500</span>) ) <span class="op">&gt;&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  select (_.Overall_Cond, _.Lot_Area, _.Neighborhood, _.Heating_QC, _.Sale_Price) </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
@@ -536,10 +871,10 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 <p>De esos 137 registros, el 93% cuentan con sistema de aire acondicionado excelente.</p>
 <div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>((_.Heating_QC <span class="op">==</span> <span class="st">"Excellent"</span>) <span class="op">&amp;</span> (_.Sale_Price <span class="op">&gt;=</span> <span class="dv">339500</span>)) <span class="op">&gt;&gt;</span> select (_.Overall_Cond, _.Lot_Area, _.Neighborhood, _.Heating_QC, _.Sale_Price)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>((_.Heating_QC <span class="op">==</span> <span class="st">"Excellent"</span>) <span class="op">&amp;</span> (_.Sale_Price <span class="op">&gt;=</span> <span class="dv">339500</span>)) <span class="op">&gt;&gt;</span> select (_.Overall_Cond, _.Lot_Area, _.Neighborhood, _.Heating_QC, _.Sale_Price)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 
@@ -653,11 +988,11 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 <p>Por último, el mayor número de propiedades con precios más altos se concentra en los barrios Northridge, Northrige Heights y Stone Brook, que, como se verá más adelante, son los barrios “más caros”.</p>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>((_.Heating_QC <span class="op">==</span> <span class="st">"Excellent"</span>) <span class="op">&amp;</span> (_.Sale_Price <span class="op">&gt;=</span> <span class="dv">339500</span>)) <span class="op">&gt;&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  select(_.Neighborhood) <span class="op">&gt;&gt;</span> arrange(_.Neighborhood) <span class="op">&gt;&gt;</span> count(_.Neighborhood) </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">filter</span>((_.Heating_QC <span class="op">==</span> <span class="st">"Excellent"</span>) <span class="op">&amp;</span> (_.Sale_Price <span class="op">&gt;=</span> <span class="dv">339500</span>)) <span class="op">&gt;&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  select(_.Neighborhood) <span class="op">&gt;&gt;</span> arrange(_.Neighborhood) <span class="op">&gt;&gt;</span> count(_.Neighborhood) </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
@@ -722,23 +1057,15 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 </div>
 </div>
-<p>Las variables numéricas que se considera muestran relación con la variable a predecir Sale_Price son las siguientes:</p>
-<ul>
-<li>Area (Lot_Area).</li>
-<li>Año de construcción (Year_Built).</li>
-<li>Año de remodelación (Year_Remod_Add).</li>
-<li>Baños completos (Full_Bath).</li>
-<li>Lugares de estacionamiento (Garage_Cars).</li>
-</ul>
 </section>
-<section id="coordenadas-geográficas" class="level3">
-<h3 class="anchored" data-anchor-id="coordenadas-geográficas"><strong>Coordenadas geográficas</strong></h3>
+<section id="variable-coordenadas-geográficas" class="level3">
+<h3 class="anchored" data-anchor-id="variable-coordenadas-geográficas">4.4 Variable Coordenadas geográficas</h3>
 <p>Es importante destacar que dentro de las variables numéricas, con formato float (enteros y decimales), se encuentran los campos Latitude y Longitude, los cuales hacen referencia a las coordenadas geográficas exactas de cada inmueble que se pueden consultar en Google Maps.</p>
 <p>Si consultamos la casa más barata, y la más cara en toda la base, tenemos las imágenes siguientes, obtenidas con base en sus coordenadas geográficas:</p>
 <div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> select(_.MS_SubClass, _.Overall_Cond, _.Latitude, _.Longitude, _.Sale_Price) <span class="op">&gt;&gt;</span> <span class="bu">filter</span>((_.Sale_Price <span class="op">==</span> _.Sale_Price.<span class="bu">min</span>()) <span class="op">|</span> (_.Sale_Price <span class="op">==</span> _.Sale_Price.<span class="bu">max</span>()))</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> select(_.MS_SubClass, _.Overall_Cond, _.Latitude, _.Longitude, _.Sale_Price) <span class="op">&gt;&gt;</span> <span class="bu">filter</span>((_.Sale_Price <span class="op">==</span> _.Sale_Price.<span class="bu">min</span>()) <span class="op">|</span> (_.Sale_Price <span class="op">==</span> _.Sale_Price.<span class="bu">max</span>()))</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <div>
 
@@ -791,23 +1118,437 @@ memory usage: 1.7+ MB</code></pre>
 </div>
 <p>Da click en las imágenes para dirigirte al inmueble correspondiente en Google Maps.</p>
 </section>
-<section id="variables-categóricas." class="level3">
-<h3 class="anchored" data-anchor-id="variables-categóricas.">2.2.3 Variables categóricas.</h3>
+<section id="análisis-de-correlaciones-de-variables-numéricas" class="level3">
+<h3 class="anchored" data-anchor-id="análisis-de-correlaciones-de-variables-numéricas">4.5 Análisis de correlaciones de variables numéricas</h3>
+<p>Se obtienen todas las correlaciones de todas las variables numéricas.</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar solo las columnas numéricas</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> ames.select_dtypes(include<span class="op">=</span>[np.number])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular la matriz de correlación</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> numeric_columns.corr()</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Puedes imprimir la matriz de correlación completa</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation_matrix)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    Lot_Frontage  Lot_Area  Year_Built  Year_Remod_Add  \
+Lot_Frontage            1.000000  0.136862    0.026130        0.069509   
+Lot_Area                0.136862  1.000000    0.023258        0.021682   
+Year_Built              0.026130  0.023258    1.000000        0.612095   
+Year_Remod_Add          0.069509  0.021682    0.612095        1.000000   
+Mas_Vnr_Area            0.109858  0.125950    0.306797        0.191740   
+BsmtFin_SF_1            0.066707 -0.045760   -0.179373       -0.050840   
+BsmtFin_SF_2           -0.005254  0.083198   -0.027328       -0.061934   
+Bsmt_Unf_SF             0.139290  0.023883    0.129311        0.165397   
+Total_Bsmt_SF           0.206080  0.253765    0.407764        0.298393   
+First_Flr_SF            0.241707  0.332235    0.310463        0.242108   
+Second_Flr_SF          -0.002813  0.032996    0.016828        0.158939   
+Gr_Liv_Area             0.186767  0.285599    0.241726        0.316855   
+Bsmt_Full_Bath          0.019554  0.124208    0.212119        0.134590   
+Bsmt_Half_Bath         -0.031798  0.026448   -0.030515       -0.046175   
+Full_Bath               0.082826  0.127433    0.469406        0.457266   
+Half_Bath              -0.029367  0.035497    0.269268        0.211771   
+Bedroom_AbvGr           0.112718  0.136569   -0.055093       -0.021536   
+Kitchen_AbvGr           0.022127 -0.020301   -0.137852       -0.142404   
+TotRms_AbvGrd           0.200488  0.216597    0.111919        0.197528   
+Fireplaces              0.051240  0.256989    0.170672        0.133322   
+Garage_Cars             0.142774  0.179456    0.537982        0.424416   
+Garage_Area             0.186780  0.212749    0.480726        0.375566   
+Wood_Deck_SF            0.001162  0.157212    0.228964        0.217857   
+Open_Porch_SF           0.085480  0.103760    0.198365        0.241748   
+Enclosed_Porch          0.024824  0.021868   -0.374364       -0.220383   
+Three_season_porch      0.004061  0.016243    0.015803        0.037412   
+Screen_Porch            0.045789  0.055044   -0.041436       -0.046888   
+Pool_Area               0.109439  0.093775    0.002213       -0.011410   
+Misc_Val                0.003098  0.069188   -0.011011       -0.003132   
+Mo_Sold                 0.017357  0.003859    0.014577        0.018048   
+Year_Sold              -0.011737 -0.023085   -0.013197        0.032652   
+Sale_Price              0.201875  0.266549    0.558426        0.532974   
+Longitude              -0.022051 -0.098612   -0.425568       -0.323822   
+Latitude                0.046942 -0.036629    0.251397        0.181050   
+
+                    Mas_Vnr_Area  BsmtFin_SF_1  BsmtFin_SF_2  Bsmt_Unf_SF  \
+Lot_Frontage            0.109858      0.066707     -0.005254     0.139290   
+Lot_Area                0.125950     -0.045760      0.083198     0.023883   
+Year_Built              0.306797     -0.179373     -0.027328     0.129311   
+Year_Remod_Add          0.191740     -0.050840     -0.061934     0.165397   
+Mas_Vnr_Area            1.000000     -0.107222     -0.014955     0.089662   
+BsmtFin_SF_1           -0.107222      1.000000     -0.121751     0.488014   
+BsmtFin_SF_2           -0.014955     -0.121751      1.000000    -0.238420   
+Bsmt_Unf_SF             0.089662      0.488014     -0.238420     1.000000   
+Total_Bsmt_SF           0.393530     -0.163311      0.090109     0.412248   
+First_Flr_SF            0.392280     -0.123074      0.084710     0.296139   
+Second_Flr_SF           0.120159      0.159652     -0.098188     0.002320   
+Gr_Liv_Area             0.400703      0.046419     -0.017996     0.235870   
+Bsmt_Full_Bath          0.139684     -0.473424      0.163634    -0.398629   
+Bsmt_Half_Bath          0.016609     -0.114581      0.099147    -0.105784   
+Full_Bath               0.254471      0.051531     -0.076262     0.274901   
+Half_Bath               0.188703      0.034869     -0.033004    -0.033530   
+Bedroom_AbvGr           0.080590      0.108739     -0.033033     0.188508   
+Kitchen_AbvGr          -0.050733      0.103491     -0.037864     0.065651   
+TotRms_AbvGrd           0.278418      0.107549     -0.049288     0.251633   
+Fireplaces              0.270051     -0.143130      0.067180     0.001790   
+Garage_Cars             0.356831     -0.077813     -0.014118     0.180080   
+Garage_Area             0.370479     -0.096932      0.003625     0.164837   
+Wood_Deck_SF            0.165875     -0.146419      0.098591    -0.039285   
+Open_Porch_SF           0.140003     -0.002644     -0.005516     0.119143   
+Enclosed_Porch         -0.109915      0.098732      0.032415     0.006383   
+Three_season_porch      0.014222     -0.048145     -0.023314    -0.005399   
+Screen_Porch            0.066817     -0.044111      0.062978    -0.047945   
+Pool_Area               0.004893     -0.025391      0.044403    -0.031963   
+Misc_Val                0.045276     -0.042043     -0.005195    -0.010125   
+Mo_Sold                -0.002358      0.017495     -0.009401     0.021915   
+Year_Sold              -0.016876     -0.035765      0.007089    -0.036443   
+Sale_Price              0.502196     -0.134905      0.006018     0.183308   
+Longitude              -0.081546      0.061665     -0.025502    -0.048123   
+Latitude                0.216882      0.005937     -0.021714     0.161017   
+
+                    Total_Bsmt_SF  First_Flr_SF  ...  Enclosed_Porch  \
+Lot_Frontage             0.206080      0.241707  ...        0.024824   
+Lot_Area                 0.253765      0.332235  ...        0.021868   
+Year_Built               0.407764      0.310463  ...       -0.374364   
+Year_Remod_Add           0.298393      0.242108  ...       -0.220383   
+Mas_Vnr_Area             0.393530      0.392280  ...       -0.109915   
+BsmtFin_SF_1            -0.163311     -0.123074  ...        0.098732   
+BsmtFin_SF_2             0.090109      0.084710  ...        0.032415   
+Bsmt_Unf_SF              0.412248      0.296139  ...        0.006383   
+Total_Bsmt_SF            1.000000      0.800429  ...       -0.084848   
+First_Flr_SF             0.800429      1.000000  ...       -0.065713   
+Second_Flr_SF           -0.204487     -0.250057  ...        0.055429   
+Gr_Liv_Area              0.445108      0.562166  ...        0.004030   
+Bsmt_Full_Bath           0.326861      0.257836  ...       -0.069014   
+Bsmt_Half_Bath           0.012850      0.010469  ...       -0.009272   
+Full_Bath                0.325434      0.371584  ...       -0.117795   
+Half_Bath               -0.054557     -0.104203  ...       -0.081312   
+Bedroom_AbvGr            0.052721      0.106648  ...        0.052115   
+Kitchen_AbvGr           -0.038612      0.076025  ...        0.027911   
+TotRms_AbvGrd            0.281627      0.390162  ...        0.017221   
+Fireplaces               0.333467      0.406345  ...       -0.000250   
+Garage_Cars              0.437856      0.439471  ...       -0.134856   
+Garage_Area              0.485608      0.491208  ...       -0.108237   
+Wood_Deck_SF             0.230290      0.227131  ...       -0.119136   
+Open_Porch_SF            0.245941      0.238041  ...       -0.059875   
+Enclosed_Porch          -0.084848     -0.065713  ...        1.000000   
+Three_season_porch       0.037918      0.044061  ...       -0.032674   
+Screen_Porch             0.075499      0.098316  ...       -0.063965   
+Pool_Area                0.072109      0.121821  ...        0.092596   
+Misc_Val                 0.083895      0.093003  ...        0.008773   
+Mo_Sold                  0.017325      0.040496  ...       -0.021324   
+Year_Sold               -0.010524     -0.013667  ...       -0.000505   
+Sale_Price               0.632529      0.621676  ...       -0.128787   
+Longitude               -0.161092     -0.135877  ...        0.140129   
+Latitude                 0.175561      0.129733  ...       -0.095854   
+
+                    Three_season_porch  Screen_Porch  Pool_Area  Misc_Val  \
+Lot_Frontage                  0.004061      0.045789   0.109439  0.003098   
+Lot_Area                      0.016243      0.055044   0.093775  0.069188   
+Year_Built                    0.015803     -0.041436   0.002213 -0.011011   
+Year_Remod_Add                0.037412     -0.046888  -0.011410 -0.003132   
+Mas_Vnr_Area                  0.014222      0.066817   0.004893  0.045276   
+BsmtFin_SF_1                 -0.048145     -0.044111  -0.025391 -0.042043   
+BsmtFin_SF_2                 -0.023314      0.062978   0.044403 -0.005195   
+Bsmt_Unf_SF                  -0.005399     -0.047945  -0.031963 -0.010125   
+Total_Bsmt_SF                 0.037918      0.075499   0.072109  0.083895   
+First_Flr_SF                  0.044061      0.098316   0.121821  0.093003   
+Second_Flr_SF                -0.032172      0.011741   0.044602 -0.005078   
+Gr_Liv_Area                   0.006481      0.086804   0.135463  0.067252   
+Bsmt_Full_Bath                0.027086      0.052355   0.043730 -0.004817   
+Bsmt_Half_Bath                0.026971      0.042372   0.066911  0.036996   
+Full_Bath                     0.015435     -0.015130   0.028205 -0.009771   
+Half_Bath                    -0.023231      0.035990   0.001515  0.026648   
+Bedroom_AbvGr                -0.047151      0.009250   0.036707  0.000887   
+Kitchen_AbvGr                -0.021379     -0.056337  -0.013066  0.025145   
+TotRms_AbvGrd                -0.025097      0.033731   0.072103  0.061134   
+Fireplaces                    0.018414      0.168004   0.098449  0.008192   
+Garage_Cars                   0.023405      0.043198   0.030415 -0.016861   
+Garage_Area                   0.029511      0.062598   0.053055  0.008526   
+Wood_Deck_SF                 -0.003967     -0.052191   0.094156  0.056820   
+Open_Porch_SF                -0.009458      0.047548   0.064135  0.077254   
+Enclosed_Porch               -0.032674     -0.063965   0.092596  0.008773   
+Three_season_porch            1.000000     -0.029430  -0.006501 -0.000753   
+Screen_Porch                 -0.029430      1.000000   0.026383  0.007162   
+Pool_Area                    -0.006501      0.026383   1.000000  0.011942   
+Misc_Val                     -0.000753      0.007162   0.011942  1.000000   
+Mo_Sold                       0.027229      0.028169  -0.042223  0.007333   
+Year_Sold                     0.022668     -0.006116  -0.052541  0.008574   
+Sale_Price                    0.032225      0.112151   0.068403 -0.015691   
+Longitude                     0.023723      0.048319  -0.001729  0.008715   
+Latitude                      0.004271      0.018962  -0.013976 -0.011554   
+
+                     Mo_Sold  Year_Sold  Sale_Price  Longitude  Latitude  
+Lot_Frontage        0.017357  -0.011737    0.201875  -0.022051  0.046942  
+Lot_Area            0.003859  -0.023085    0.266549  -0.098612 -0.036629  
+Year_Built          0.014577  -0.013197    0.558426  -0.425568  0.251397  
+Year_Remod_Add      0.018048   0.032652    0.532974  -0.323822  0.181050  
+Mas_Vnr_Area       -0.002358  -0.016876    0.502196  -0.081546  0.216882  
+BsmtFin_SF_1        0.017495  -0.035765   -0.134905   0.061665  0.005937  
+BsmtFin_SF_2       -0.009401   0.007089    0.006018  -0.025502 -0.021714  
+Bsmt_Unf_SF         0.021915  -0.036443    0.183308  -0.048123  0.161017  
+Total_Bsmt_SF       0.017325  -0.010524    0.632529  -0.161092  0.175561  
+First_Flr_SF        0.040496  -0.013667    0.621676  -0.135877  0.129733  
+Second_Flr_SF       0.013247  -0.018530    0.269373  -0.048694  0.097644  
+Gr_Liv_Area         0.043665  -0.026489    0.706780  -0.142516  0.179690  
+Bsmt_Full_Bath     -0.003322   0.044805    0.275823  -0.114529 -0.015952  
+Bsmt_Half_Bath      0.022741  -0.019556   -0.035817   0.052260 -0.039032  
+Full_Bath           0.046032  -0.004754    0.545604  -0.228773  0.214763  
+Half_Bath          -0.001311   0.001561    0.285056  -0.118501  0.167289  
+Bedroom_AbvGr       0.053677  -0.018008    0.143913  -0.038976  0.017599  
+Kitchen_AbvGr       0.035201   0.035421   -0.119814   0.067370 -0.074570  
+TotRms_AbvGrd       0.043784  -0.030498    0.495474  -0.086322  0.148099  
+Fireplaces          0.032152  -0.007612    0.474558  -0.057514  0.146768  
+Garage_Cars         0.050728  -0.021990    0.647562  -0.216828  0.260615  
+Garage_Area         0.040391  -0.012556    0.640138  -0.208203  0.211960  
+Wood_Deck_SF        0.016974   0.000882    0.327143  -0.144560  0.034529  
+Open_Porch_SF       0.033651  -0.037467    0.312951  -0.095491  0.087910  
+Enclosed_Porch     -0.021324  -0.000505   -0.128787   0.140129 -0.095854  
+Three_season_porch  0.027229   0.022668    0.032225   0.023723  0.004271  
+Screen_Porch        0.028169  -0.006116    0.112151   0.048319  0.018962  
+Pool_Area          -0.042223  -0.052541    0.068403  -0.001729 -0.013976  
+Misc_Val            0.007333   0.008574   -0.015691   0.008715 -0.011554  
+Mo_Sold             1.000000  -0.155554    0.035259   0.038735  0.043667  
+Year_Sold          -0.155554   1.000000   -0.030569   0.003935 -0.011345  
+Sale_Price          0.035259  -0.030569    1.000000  -0.251397  0.290891  
+Longitude           0.038735   0.003935   -0.251397   1.000000  0.030089  
+Latitude            0.043667  -0.011345    0.290891   0.030089  1.000000  
+
+[34 rows x 34 columns]</code></pre>
+</div>
+</div>
+<p>Revisado lo anterior, se consideran relevantes las correlaciones mayores o iguales a 0.5</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> ames.select_dtypes(include<span class="op">=</span>[np.number])</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular las correlaciones entre todas las variables numéricas</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> numeric_columns.corr()</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterar a través de las correlaciones y mostrar las que son mayores o iguales a 0.5</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column1 <span class="kw">in</span> correlation_matrix.columns:</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> column2 <span class="kw">in</span> correlation_matrix.columns:</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>        correlation <span class="op">=</span> correlation_matrix.loc[column1, column2]</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> column1 <span class="op">!=</span> column2 <span class="kw">and</span> <span class="bu">abs</span>(correlation) <span class="op">&gt;=</span> <span class="fl">0.5</span>:</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Correlación entre </span><span class="sc">{</span>column1<span class="sc">}</span><span class="ss"> y </span><span class="sc">{</span>column2<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>correlation<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Correlación entre Year_Built y Year_Remod_Add: 0.6120952503946816
+Correlación entre Year_Built y Garage_Cars: 0.5379817054609293
+Correlación entre Year_Built y Sale_Price: 0.5584261057120437
+Correlación entre Year_Remod_Add y Year_Built: 0.6120952503946816
+Correlación entre Year_Remod_Add y Sale_Price: 0.532973754026694
+Correlación entre Mas_Vnr_Area y Sale_Price: 0.5021959770445465
+Correlación entre Total_Bsmt_SF y First_Flr_SF: 0.8004286876684684
+Correlación entre Total_Bsmt_SF y Sale_Price: 0.6325288490320315
+Correlación entre First_Flr_SF y Total_Bsmt_SF: 0.8004286876684684
+Correlación entre First_Flr_SF y Gr_Liv_Area: 0.562165842932009
+Correlación entre First_Flr_SF y Sale_Price: 0.6216760632702522
+Correlación entre Second_Flr_SF y Gr_Liv_Area: 0.6552511798220086
+Correlación entre Second_Flr_SF y Half_Bath: 0.6116336701499726
+Correlación entre Second_Flr_SF y Bedroom_AbvGr: 0.5046505900002038
+Correlación entre Second_Flr_SF y TotRms_AbvGrd: 0.5852136527493758
+Correlación entre Gr_Liv_Area y First_Flr_SF: 0.562165842932009
+Correlación entre Gr_Liv_Area y Second_Flr_SF: 0.6552511798220086
+Correlación entre Gr_Liv_Area y Full_Bath: 0.6303208098774116
+Correlación entre Gr_Liv_Area y Bedroom_AbvGr: 0.5168075108650242
+Correlación entre Gr_Liv_Area y TotRms_AbvGrd: 0.8077721448904711
+Correlación entre Gr_Liv_Area y Sale_Price: 0.7067799209766268
+Correlación entre Full_Bath y Gr_Liv_Area: 0.6303208098774116
+Correlación entre Full_Bath y TotRms_AbvGrd: 0.5285991741538512
+Correlación entre Full_Bath y Sale_Price: 0.5456039005201108
+Correlación entre Half_Bath y Second_Flr_SF: 0.6116336701499726
+Correlación entre Bedroom_AbvGr y Second_Flr_SF: 0.5046505900002038
+Correlación entre Bedroom_AbvGr y Gr_Liv_Area: 0.5168075108650242
+Correlación entre Bedroom_AbvGr y TotRms_AbvGrd: 0.6726471644586508
+Correlación entre TotRms_AbvGrd y Second_Flr_SF: 0.5852136527493758
+Correlación entre TotRms_AbvGrd y Gr_Liv_Area: 0.8077721448904711
+Correlación entre TotRms_AbvGrd y Full_Bath: 0.5285991741538512
+Correlación entre TotRms_AbvGrd y Bedroom_AbvGr: 0.6726471644586508
+Correlación entre Garage_Cars y Year_Built: 0.5379817054609293
+Correlación entre Garage_Cars y Garage_Area: 0.8898659902448479
+Correlación entre Garage_Cars y Sale_Price: 0.6475616131207715
+Correlación entre Garage_Area y Garage_Cars: 0.8898659902448479
+Correlación entre Garage_Area y Sale_Price: 0.6401382984873729
+Correlación entre Sale_Price y Year_Built: 0.5584261057120437
+Correlación entre Sale_Price y Year_Remod_Add: 0.532973754026694
+Correlación entre Sale_Price y Mas_Vnr_Area: 0.5021959770445465
+Correlación entre Sale_Price y Total_Bsmt_SF: 0.6325288490320315
+Correlación entre Sale_Price y First_Flr_SF: 0.6216760632702522
+Correlación entre Sale_Price y Gr_Liv_Area: 0.7067799209766268
+Correlación entre Sale_Price y Full_Bath: 0.5456039005201108
+Correlación entre Sale_Price y Garage_Cars: 0.6475616131207715
+Correlación entre Sale_Price y Garage_Area: 0.6401382984873729</code></pre>
+</div>
+</div>
+<p>Del resultado anterior, 9 variables tienen una correlación mayor o igual a 0.5 con respecto al precio de ventas:</p>
+<ol type="1">
+<li><p>Gr_Liv_Area: 0.707</p></li>
+<li><p>Garage_Cars: 0.648</p></li>
+<li><p>Garage_Area: 0.640</p></li>
+<li><p>Total_Bsmt_SF: 0.633</p></li>
+<li><p>First_Flr_SF: 0.622</p></li>
+<li><p>Year_Built: 0.558</p></li>
+<li><p>Full_Bath: 0.546</p></li>
+<li><p>Year_Remod_Add: 0.533</p></li>
+<li><p>Mas_Vnr_Area: 0.502</p></li>
+</ol>
+<p>Dada la similitud entre las variables Garage_Cars y Garace_Area, se considera sólo a la primera, que tiene un poco más de correlación.</p>
+<p><strong>Area (Lot_Area)</strong></p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> select(_.MS_SubClass, _.Overall_Cond, _.Lot_Area, _.Sale_Price) <span class="op">&gt;&gt;</span> <span class="bu">filter</span>((_.Lot_Area <span class="op">==</span> _.Lot_Area.<span class="bu">min</span>()) <span class="op">|</span> (_.Lot_Area <span class="op">==</span> _.Lot_Area.<span class="bu">max</span>()))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">MS_SubClass</th>
+<th data-quarto-table-cell-role="th">Overall_Cond</th>
+<th data-quarto-table-cell-role="th">Lot_Area</th>
+<th data-quarto-table-cell-role="th">Sale_Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">935</td>
+<td>Two_Story_PUD_1946_and_Newer</td>
+<td>Above_Average</td>
+<td>1300</td>
+<td>124000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">956</td>
+<td>One_Story_1946_and_Newer_All_Styles</td>
+<td>Average</td>
+<td>215245</td>
+<td>375000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Los inmuebles en Ames, Iowa, van desde los 1,300 pies cuadrados (396 mts. cuadrados) hasta los 215,245 pies cuadrados (65,607 mts. cuadrados).</p>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames[<span class="st">'Sale_Price'</span>].corr(ames[<span class="st">'Lot_Area'</span>])</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el tamaño de los lotes o área de las casas de Ames y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La correlación entre el tamaño de los lotes o área de las casas de Ames y su precio de venta es 0.27</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>0.27</code></pre>
+</div>
+</div>
+<p>Lo anterior es indicativo de que hay una correlación débil que muestra que no es una variable que influye en el precio de venta.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Lot_Area"</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  geom_point()</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a> )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<p><strong>Año de construcción / remodelación (Year_Built, Year_Remod_Add)</strong></p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames[<span class="st">'Sale_Price'</span>].corr(ames[<span class="st">'Year_Remod_Add'</span>])</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el año de construcción / remodelación y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La correlación entre el año de construcción / remodelación y su precio de venta es 0.53</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>0.53</code></pre>
+</div>
+</div>
+<p>De modo que se considera que hay una correlación moderada que indica que sí es una variable que influye en el precio de venta.</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Year_Remod_Add"</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  geom_point()</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a> )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<p><strong>Baños completos (Full_Bath)</strong></p>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames[<span class="st">'Sale_Price'</span>].corr(ames[<span class="st">'Full_Bath'</span>])</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el número de baños completos en las casas de Ames y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La correlación entre el número de baños completos en las casas de Ames y su precio de venta es 0.55</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>0.55</code></pre>
+</div>
+</div>
+<p>Se considera que hay una correlación moderada que indica que sí es una variable que influye en el precio de venta.</p>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Full_Bath"</span>, color <span class="op">=</span> <span class="st">"Full_Bath"</span>))  <span class="op">+</span> </span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-22-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<p><strong>Lugares de estacionamiento (Garage_Cars)</strong></p>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames[<span class="st">'Sale_Price'</span>].corr(ames[<span class="st">'Garage_Cars'</span>])</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el número de carros que caben en el garage de las casas de Ames y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La correlación entre el número de carros que caben en el garage de las casas de Ames y su precio de venta es 0.65</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>0.65</code></pre>
+</div>
+</div>
+<p>Por consiguiente se considera que hay una correlación moderada que indica que sí es una variable que influye en el precio de venta.</p>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Garage_Cars"</span>, color <span class="op">=</span> <span class="st">"Garage_Cars"</span>))  <span class="op">+</span> </span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-24-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="variables-categóricas" class="level3">
+<h3 class="anchored" data-anchor-id="variables-categóricas">4.6 Variables categóricas</h3>
 <p>Las variables categóricas que se considera muestran relación con la variable a predecir Sale_Price son las siguientes:</p>
 <ul>
-<li>Barrio (Neighborhood).</li>
-<li>Estado general (Overall_Cond).</li>
-<li>Tipo de casa (House_Style).</li>
-<li>Aire acondicionado (Heating_QC).</li>
+<li><p>Barrio (Neighborhood).</p></li>
+<li><p>Estado general (Overall_Cond).</p></li>
+<li><p>Tipo de casa (House_Style).</p></li>
+<li><p>Aire acondicionado (Heating_QC).</p></li>
 </ul>
-</section>
-<section id="barrio-neighborhood" class="level3">
-<h3 class="anchored" data-anchor-id="barrio-neighborhood"><strong>Barrio (Neighborhood)</strong></h3>
+<p><strong>Barrio (Neighborhood)</strong></p>
 <p>Existen 28 barrios; la mayoría de las casas se concentran en North Ames, College Creek, Old Town y Edwards (39%):</p>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables categóricas</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ames_housing[<span class="st">'Neighborhood'</span>].value_counts()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables categóricas</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>ames[<span class="st">'Neighborhood'</span>].value_counts()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>Neighborhood
 North_Ames                                 443
 College_Creek                              267
@@ -841,15 +1582,15 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Los precios promedio por barrio nos indican que Northridge, Stone Brook y Northridge Heights son barrios cuyo promedio casi duplica el priomedio general de las casas en Ames.</p>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Precio de venta promedio por barrio</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a> group_by(_.Neighborhood) <span class="op">&gt;&gt;</span> </span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a> summarize(Mean_Sale_Price <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">0</span>) ) <span class="op">&gt;&gt;</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a> arrange(<span class="op">-</span>_.Mean_Sale_Price)</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Precio de venta promedio por barrio</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a> group_by(_.Neighborhood) <span class="op">&gt;&gt;</span> </span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a> summarize(Mean_Sale_Price <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">0</span>) ) <span class="op">&gt;&gt;</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a> arrange(<span class="op">-</span>_.Mean_Sale_Price)</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
@@ -1008,18 +1749,16 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div>
-</section>
-<section id="estado-general-overall_cond" class="level3">
-<h3 class="anchored" data-anchor-id="estado-general-overall_cond"><strong>Estado general (Overall_Cond)</strong></h3>
+<p><strong>Estado general (Overall_Cond)</strong></p>
 <p>Tabla de precios de venta por Estado general del inmueble, comparando las métricas básicas, en particular la relación media a mediana (sesgo).</p>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    group_by(_.Overall_Cond) <span class="op">&gt;&gt;</span> </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    summarize(Q1 <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.25</span>), MEDIA <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">1</span>), MEDIANA <span class="op">=</span> _.Sale_Price.median().<span class="bu">round</span>(<span class="dv">1</span>), Q3 <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.75</span>), STDEV <span class="op">=</span> _.Sale_Price.std().<span class="bu">round</span>(<span class="dv">1</span>)) <span class="op">&gt;&gt;</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    mutate(SESGO <span class="op">=</span> if_else(_.MEDIA <span class="op">&gt;</span> _.MEDIANA, <span class="st">"DERECHA"</span>, <span class="st">"IZQUIERDA"</span>))</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>    group_by(_.Overall_Cond) <span class="op">&gt;&gt;</span> </span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    summarize(Q1 <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.25</span>), MEDIA <span class="op">=</span> _.Sale_Price.mean().<span class="bu">round</span>(<span class="dv">1</span>), MEDIANA <span class="op">=</span> _.Sale_Price.median().<span class="bu">round</span>(<span class="dv">1</span>), Q3 <span class="op">=</span> _.Sale_Price.quantile(q <span class="op">=</span> <span class="fl">.75</span>), STDEV <span class="op">=</span> _.Sale_Price.std().<span class="bu">round</span>(<span class="dv">1</span>)) <span class="op">&gt;&gt;</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>    mutate(SESGO <span class="op">=</span> if_else(_.MEDIA <span class="op">&gt;</span> _.MEDIANA, <span class="st">"DERECHA"</span>, <span class="st">"IZQUIERDA"</span>))</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
 <div>
 
 
@@ -1134,195 +1873,16 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Hay inidicios de que el precio tiene relación directa con la condición general del inmueble.</p>
-<div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a> ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  ggplot( aes( x <span class="op">=</span> <span class="st">"Overall_Cond"</span>)) <span class="op">+</span> </span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  geom_bar( color<span class="op">=</span> <span class="st">"darkblue"</span>, fill<span class="op">=</span> <span class="st">"cyan"</span>, alpha<span class="op">=</span> <span class="fl">0.7</span>) <span class="op">+</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels <span class="op">=</span> comma_format()) <span class="op">+</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"Distribución de Condición General"</span>) <span class="op">+</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  theme_dark() <span class="op">+</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-17-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Overall_Cond"</span>, color <span class="op">=</span> <span class="st">"Overall_Cond"</span>))  <span class="op">+</span> </span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Overall_Cond"</span>, color <span class="op">=</span> <span class="st">"Overall_Cond"</span>))  <span class="op">+</span> </span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  geom_boxplot(size<span class="op">=</span><span class="dv">1</span>, alpha<span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="18">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a> ggplot(ames_housing, aes(x <span class="op">=</span> <span class="st">"Sale_Price"</span>, y <span class="op">=</span> <span class="st">"Year_Remod_Add"</span>, color <span class="op">=</span> <span class="st">"Overall_Cond"</span>)) <span class="op">+</span> </span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  geom_point() <span class="op">+</span> geom_smooth(method <span class="op">=</span> <span class="st">"lm"</span>) <span class="op">+</span> </span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  facet_wrap(<span class="st">"Overall_Cond"</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>)</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="19">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="area-lot_area" class="level3">
-<h3 class="anchored" data-anchor-id="area-lot_area"><strong>Area (Lot_Area)</strong></h3>
-<div class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> select(_.MS_SubClass, _.Overall_Cond, _.Lot_Area, _.Sale_Price) <span class="op">&gt;&gt;</span> <span class="bu">filter</span>((_.Lot_Area <span class="op">==</span> _.Lot_Area.<span class="bu">min</span>()) <span class="op">|</span> (_.Lot_Area <span class="op">==</span> _.Lot_Area.<span class="bu">max</span>()))</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">MS_SubClass</th>
-<th data-quarto-table-cell-role="th">Overall_Cond</th>
-<th data-quarto-table-cell-role="th">Lot_Area</th>
-<th data-quarto-table-cell-role="th">Sale_Price</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">935</td>
-<td>Two_Story_PUD_1946_and_Newer</td>
-<td>Above_Average</td>
-<td>1300</td>
-<td>124000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">956</td>
-<td>One_Story_1946_and_Newer_All_Styles</td>
-<td>Average</td>
-<td>215245</td>
-<td>375000</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>Los inmuebles en Ames, Iowa, van desde los 1,300 pies cuadrados (396 mts. cuadrados) hasta los 215,245 pies cuadrados (65,607 mts. cuadrados).</p>
-<div class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames_housing[<span class="st">'Sale_Price'</span>].corr(ames_housing[<span class="st">'Lot_Area'</span>])</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el tamaño de los lotes o área de las casas de Ames y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>La correlación entre el tamaño de los lotes o área de las casas de Ames y su precio de venta es 0.27</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="21">
-<pre><code>0.27</code></pre>
-</div>
-</div>
-<p>Lo anterior es indicativo de que hay una correlación débil que muestra que no es una variable que influye en el precio de venta.</p>
-<div class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Lot_Area"</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  geom_point()</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a> )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-23-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="22">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="año-de-construcción-remodelación-year_built-year_remod_add" class="level3">
-<h3 class="anchored" data-anchor-id="año-de-construcción-remodelación-year_built-year_remod_add"><strong>Año de construcción / remodelación (Year_Built, Year_Remod_Add)</strong></h3>
-<div class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames_housing[<span class="st">'Sale_Price'</span>].corr(ames_housing[<span class="st">'Year_Remod_Add'</span>])</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el año de construcción / remodelación y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>La correlación entre el año de construcción / remodelación y su precio de venta es 0.53</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="23">
-<pre><code>0.53</code></pre>
-</div>
-</div>
-<p>De modo que se considera que hay una correlación moderada que indica que sí es una variable que influye en el precio de venta.</p>
-<div class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Year_Remod_Add"</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  geom_point()</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a> )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="24">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="baños-completos-full_bath" class="level3">
-<h3 class="anchored" data-anchor-id="baños-completos-full_bath"><strong>Baños completos (Full_Bath)</strong></h3>
-<div class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames_housing[<span class="st">'Sale_Price'</span>].corr(ames_housing[<span class="st">'Full_Bath'</span>])</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el número de baños completos en las casas de Ames y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>La correlación entre el número de baños completos en las casas de Ames y su precio de venta es 0.55</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="25">
-<pre><code>0.55</code></pre>
-</div>
-</div>
-<p>Se considera que hay una correlación moderada que indica que sí es una variable que influye en el precio de venta.</p>
-<div class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Full_Bath"</span>, color <span class="op">=</span> <span class="st">"Full_Bath"</span>))  <span class="op">+</span> </span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-27-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="26">
-<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="tipo-de-casa-house_style" class="level3">
-<h3 class="anchored" data-anchor-id="tipo-de-casa-house_style"><strong>Tipo de casa (House_Style)</strong></h3>
 <div class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"House_Style"</span>, color <span class="op">=</span> <span class="st">"House_Style"</span>))  <span class="op">+</span> </span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a> ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  ggplot( aes( x <span class="op">=</span> <span class="st">"Overall_Cond"</span>)) <span class="op">+</span> </span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  geom_bar( color<span class="op">=</span> <span class="st">"darkblue"</span>, fill<span class="op">=</span> <span class="st">"cyan"</span>, alpha<span class="op">=</span> <span class="fl">0.7</span>) <span class="op">+</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels <span class="op">=</span> comma_format()) <span class="op">+</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"Distribución de Condición General"</span>) <span class="op">+</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>  theme_dark() <span class="op">+</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>  theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
 </div>
@@ -1330,28 +1890,25 @@ Name: count, dtype: int64</code></pre>
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
-<p>El mayor número de registros se agrupa en las casas clásicas de uno y dos pisos.</p>
-</section>
-<section id="lugares-de-estacionamiento-garage_cars" class="level3">
-<h3 class="anchored" data-anchor-id="lugares-de-estacionamiento-garage_cars"><strong>Lugares de estacionamiento (Garage_Cars)</strong></h3>
 <div class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> ames_housing[<span class="st">'Sale_Price'</span>].corr(ames_housing[<span class="st">'Garage_Cars'</span>])</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'La correlación entre el número de carros que caben en el garage de las casas de Ames y su precio de venta es </span><span class="sc">{</span>correlation<span class="sc">.</span><span class="bu">round</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>correlation.<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>La correlación entre el número de carros que caben en el garage de las casas de Ames y su precio de venta es 0.65</code></pre>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Overall_Cond"</span>, color <span class="op">=</span> <span class="st">"Overall_Cond"</span>))  <span class="op">+</span> </span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-29-output-1.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="28">
-<pre><code>0.65</code></pre>
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
-<p>Por consiguiente se considera que hay una correlación moderada que indica que sí es una variable que influye en el precio de venta.</p>
 <div class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Garage_Cars"</span>, color <span class="op">=</span> <span class="st">"Garage_Cars"</span>))  <span class="op">+</span> </span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Overall_Cond"</span>, color <span class="op">=</span> <span class="st">"Overall_Cond"</span>))  <span class="op">+</span> </span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>  geom_boxplot(size<span class="op">=</span><span class="dv">1</span>, alpha<span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-30-output-1.png" class="img-fluid"></p>
 </div>
@@ -1359,20 +1916,12 @@ Name: count, dtype: int64</code></pre>
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="aire-acondicionado-heating_qc" class="level3">
-<h3 class="anchored" data-anchor-id="aire-acondicionado-heating_qc"><strong>Aire acondicionado (Heating_QC)</strong></h3>
-<p>Como se indicó anteriormente en el análisis de datos atípicos en la base de datos, el aire acondicionado juega un papel importante.</p>
-<p>El gráfico siguiente, muestra que los inmuebles con aire de típico a excelente, concentran la mayor cantidad de resultados.</p>
-<p>Con base en consulta en Perplexity AI (es un motor de búsqueda basado en inteligencia artificial), los inviernos son muy fríos:</p>
-<p><em>Durante el invierno, la temperatura máxima diaria promedio permanece alrededor de 2°C y está nublado o mayormente nublado aproximadamente el 54% del tiempo[2]. El mes de enero es el más frío, con una temperatura media de -7°C.</em></p>
-<p><a href="https://www.perplexity.ai/search/Cmo-es-el-f3bx8CCRQ_ytxJ2tGJVKbw?s=c" class="uri">https://www.perplexity.ai/search/Cmo-es-el-f3bx8CCRQ_ytxJ2tGJVKbw?s=c</a></p>
 <div class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>ames_housing <span class="op">&gt;&gt;</span> </span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Heating_QC"</span>, color <span class="op">=</span> <span class="st">"Heating_QC"</span>))  <span class="op">+</span> </span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a> ggplot(ames, aes(x <span class="op">=</span> <span class="st">"Sale_Price"</span>, y <span class="op">=</span> <span class="st">"Year_Remod_Add"</span>, color <span class="op">=</span> <span class="st">"Overall_Cond"</span>)) <span class="op">+</span> </span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  geom_point() <span class="op">+</span> geom_smooth(method <span class="op">=</span> <span class="st">"lm"</span>) <span class="op">+</span> </span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  facet_wrap(<span class="st">"Overall_Cond"</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-31-output-1.png" class="img-fluid"></p>
 </div>
@@ -1380,19 +1929,1119 @@ Name: count, dtype: int64</code></pre>
 <pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="conclusión." class="level3">
-<h3 class="anchored" data-anchor-id="conclusión.">3. Conclusión.</h3>
+<p><strong>Tipo de casa (House_Style)</strong></p>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"House_Style"</span>, color <span class="op">=</span> <span class="st">"House_Style"</span>))  <span class="op">+</span> </span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<p>El mayor número de registros se agrupa en las casas clásicas de uno y dos pisos.</p>
+<p><strong>Aire acondicionado (Heating_QC)</strong></p>
+<p>Como se indicó anteriormente en el análisis de datos atípicos en la base de datos, el aire acondicionado juega un papel importante.</p>
+<p>El gráfico siguiente, muestra que los inmuebles con aire de típico a excelente, concentran la mayor cantidad de resultados.</p>
+<p>Con base en consulta en Perplexity AI (es un motor de búsqueda basado en inteligencia artificial), los inviernos son muy fríos:</p>
+<p><em>Durante el invierno, la temperatura máxima diaria promedio permanece alrededor de 2°C y está nublado o mayormente nublado aproximadamente el 54% del tiempo[2]. El mes de enero es el más frío, con una temperatura media de -7°C.</em></p>
+<p><a href="https://www.perplexity.ai/search/Cmo-es-el-f3bx8CCRQ_ytxJ2tGJVKbw?s=c">Enlace a Perplexity.ai consulta de temperatura en Ames, Iowa.</a></p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>ames <span class="op">&gt;&gt;</span> </span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(y <span class="op">=</span> <span class="st">"Sale_Price"</span>, x <span class="op">=</span> <span class="st">"Heating_QC"</span>, color <span class="op">=</span> <span class="st">"Heating_QC"</span>))  <span class="op">+</span> </span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  geom_jitter(size <span class="op">=</span> <span class="fl">0.3</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> theme(axis_text_x<span class="op">=</span>element_text(angle<span class="op">=</span><span class="dv">90</span>))</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
 <p>Las variables útiles para predecir el Precio de Venta de una determinada casa en Ames, Iowa son las siguientes:</p>
 <ol type="1">
+<li><p>Area del sótano en pies cuadrados (Total_Bsmt_SF).</p></li>
+<li><p>Superficie habitable (Gr_Liv_Area).</p></li>
+<li><p>Pies cuadrados del primer piso (First_Flr_SF).</p></li>
+<li><p>Capacidad de autos en el garage (Garage_Cars).</p></li>
+<li><p>Año de remodelación (Year_Remod_Add).</p></li>
 <li><p>Barrio (Neighborhood).</p></li>
 <li><p>Estado general (Overall_Cond).</p></li>
-<li><p>Tipo de casa (House_Style).</p></li>
-<li><p>Aire acondicionado (Heating_QC).</p></li>
-<li><p>Año de remodelación (Year_Remod_Add).</p></li>
-<li><p>Baños completos (Full_Bath).</p></li>
 </ol>
 <p>Se considera importante desarrollar un modelo integral propio de la ciencia de datos para predecir mejor el precio de venta con base en éstas variables.</p>
+</section>
+</section>
+<section id="modelo-de-regresión-lineal-múltiple" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-regresión-lineal-múltiple"><strong>5. Modelo de regresión lineal múltiple</strong></h2>
+<p>Como sabemos, dado que tenemos más de una variable independiente, en lugar de una recta, el modelo es un hiperplano que se ajusta a partir de las covariables explicativas:</p>
+<p><span class="math display">\[X_1, X_2, X_3, ..., X_m\]</span></p>
+<p>La regresión lineal múltiple permite generar un modelo en el que el valor de la variable dependiente o respuesta (Precio de Venta) se determina a partir de un conjunto de variables independientes llamadas predictores, que revisamos en nuestro EDA más un término de error.</p>
+<p><span class="math display">\[Y = \beta _0+\beta _1 X_1 + ...+\beta _m X_m+\epsilon\]</span> Y es la variable respuesta, X las variables explicativas y las betas son los coeficientes parciales de regresión.</p>
+<p>Tanto en el análisis exploratorio, como en el diferencial, hemos cuidado mantener una objetividad y no caer en sesgos, para no forzar a encontrar lo que nos gustaría en los datos.</p>
+<section id="condiciones-para-el-ajuste-de-una-regresión-lineal" class="level3">
+<h3 class="anchored" data-anchor-id="condiciones-para-el-ajuste-de-una-regresión-lineal">5.1 Condiciones para el ajuste de una regresión lineal:</h3>
+<ul>
+<li><p>Linealidad.</p></li>
+<li><p>Distribución normal de los residuos. Ver un histograma de errores, normal centrada en cero.</p></li>
+<li><p>Varianza de residuos constante (homocedasticidad).</p></li>
+<li><p>Independencia. Que no exista correlación entre variables.</p></li>
+</ul>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Particionamos y extraemos la variable de respuesta</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>ames_y <span class="op">=</span> ames <span class="op">&gt;&gt;</span> pull(<span class="st">"Sale_Price"</span>)    <span class="co"># ames[["Sale_Price"]]</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Se seleccionan todos los demás datos en ames_x</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>ames_x <span class="op">=</span> select(ames, <span class="op">-</span>_.Sale_Price)   <span class="co"># ames.drop('Sale_Price', axis=1)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>División de datos, tenemos conjuntos de test y train para <em>x</em> y <em>y</em></p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>ames_x_train, ames_x_test, ames_y_train, ames_y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a> ames_x, ames_y, </span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a> test_size <span class="op">=</span> <span class="fl">0.20</span>, </span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a> random_state <span class="op">=</span> <span class="dv">195</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a> )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="feature-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="feature-engineering">5.2 Feature Engineering</h3>
+<p>Selección de variables</p>
+<p>Seleccionamos las variables numéricas de interés, las que quiero incorporar a mi modelo</p>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionamos las variales numéricas de interés</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> [<span class="st">"Total_Bsmt_SF"</span>, <span class="st">"Gr_Liv_Area"</span>, <span class="st">"Year_Remod_Add"</span>, <span class="st">"First_Flr_SF"</span>,  <span class="st">"Garage_Cars"</span>]</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionamos las variables categóricas de interés</span></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> [<span class="st">"Overall_Cond"</span>, <span class="st">"Neighborhood"</span>]  <span class="co"># R2 = 0.820</span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a><span class="co">#cat_cols = ["Overall_Cond"]  # R2 = .0751</span></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="co">#cat_cols = ["Neighborhood"]  # R2 = 0.811</span></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Juntamos todas las variables de interés, numéricas y categóricas</span></span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>columnas_seleccionadas <span class="op">=</span> num_cols <span class="op">+</span> cat_cols</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>pipe <span class="op">=</span> ColumnSelector(columnas_seleccionadas)</span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Arreglo con los valores que interesan:</span></span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a>ames_x_train_selected <span class="op">=</span> pipe.fit_transform(ames_x_train)</span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Recuperamos los nombres de las columnas</span></span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a>ames_train_selected <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a>  ames_x_train_selected, </span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a>  columns <span class="op">=</span> columnas_seleccionadas</span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ames_train_selected)</span>
+<span id="cb60-21"><a href="#cb60-21" aria-hidden="true" tabindex="-1"></a>ames_train_selected.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Total_Bsmt_SF Gr_Liv_Area Year_Remod_Add First_Flr_SF Garage_Cars  \
+0              625        1250           2007          625           2   
+1             1561        1561           2005         1561           2   
+2              533        1775           1964         1131           2   
+3              631        1112           1951         1112           2   
+4             1161        1381           2006         1381           2   
+...            ...         ...            ...          ...         ...   
+2339           546        1092           1970          546           0   
+2340          1760        1760           2004         1760           2   
+2341           768         789           1950          789           1   
+2342           970        2393           1999         1469           2   
+2343           662        2337           1950         1422           2   
+
+       Overall_Cond        Neighborhood  
+0           Average            Somerset  
+1           Average  Northridge_Heights  
+2           Average          North_Ames  
+3           Average          North_Ames  
+4              Good      Northwest_Ames  
+...             ...                 ...  
+2339  Below_Average      Meadow_Village  
+2340        Average  Northridge_Heights  
+2341        Average            Crawford  
+2342        Average            Somerset  
+2343        Average            Old_Town  
+
+[2344 rows x 7 columns]
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 2344 entries, 0 to 2343
+Data columns (total 7 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   Total_Bsmt_SF   2344 non-null   object
+ 1   Gr_Liv_Area     2344 non-null   object
+ 2   Year_Remod_Add  2344 non-null   object
+ 3   First_Flr_SF    2344 non-null   object
+ 4   Garage_Cars     2344 non-null   object
+ 5   Overall_Cond    2344 non-null   object
+ 6   Neighborhood    2344 non-null   object
+dtypes: object(7)
+memory usage: 128.3+ KB</code></pre>
+</div>
+</div>
+<p>La selección de las variables categóricas Overall_Cond o Neighborhood, por sí solas, proporcionan una <em>r2</em> de 0.751 y 0.811, respectivamente, razón por la cual se seleccionan juntas, ya que entregan una métrica de desempeño un poco mejor, de 0.820.</p>
+</section>
+<section id="transformación-de-columnas" class="level3">
+<h3 class="anchored" data-anchor-id="transformación-de-columnas">5.4 Transformación de columnas</h3>
+<p>Estandarizamos las variables numéricas Procesamos las columnas categóricas Impedimos que en el nombre combine el método y la variable Pedimos que lo demás permanezca sin cambios</p>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ColumnTransformer para aplicar transformaciones</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>preprocessor <span class="op">=</span> ColumnTransformer(</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>    transformers <span class="op">=</span> [</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'scaler'</span>, StandardScaler(), num_cols),</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'onehotencoding'</span>, OneHotEncoder(drop<span class="op">=</span><span class="st">'first'</span>, sparse_output<span class="op">=</span><span class="va">False</span>), cat_cols)</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>    verbose_feature_names_out <span class="op">=</span> <span class="va">False</span>,</span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>    remainder <span class="op">=</span> <span class="st">'passthrough'</span>  <span class="co"># Mantener las columnas restantes sin cambios</span></span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a>transformed_data <span class="op">=</span> preprocessor.fit_transform(ames_train_selected)</span>
+<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a>new_column_names <span class="op">=</span> preprocessor.get_feature_names_out()</span>
+<span id="cb62-13"><a href="#cb62-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-14"><a href="#cb62-14" aria-hidden="true" tabindex="-1"></a>transformed_df <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb62-15"><a href="#cb62-15" aria-hidden="true" tabindex="-1"></a>  transformed_data, </span>
+<span id="cb62-16"><a href="#cb62-16" aria-hidden="true" tabindex="-1"></a>  columns<span class="op">=</span>new_column_names</span>
+<span id="cb62-17"><a href="#cb62-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb62-18"><a href="#cb62-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb62-19"><a href="#cb62-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(transformed_df)</span>
+<span id="cb62-20"><a href="#cb62-20" aria-hidden="true" tabindex="-1"></a>transformed_df.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Total_Bsmt_SF  Gr_Liv_Area  Year_Remod_Add  First_Flr_SF  Garage_Cars  \
+0         -0.981450    -0.489850        1.084460     -1.365036     0.308118   
+1          1.177934     0.125086        0.988539      1.019965     0.308118   
+2         -1.193697     0.548225       -0.977858     -0.075709     0.308118   
+3         -0.967608    -0.762715       -1.601350     -0.124122     0.308118   
+4          0.255120    -0.230825        1.036500      0.561311     0.308118   
+...             ...          ...             ...           ...          ...   
+2339      -1.163706    -0.802261       -0.690093     -1.566334    -2.322954   
+2340       1.637034     0.518566        0.940578      1.527033     0.308118   
+2341      -0.651544    -1.401379       -1.649310     -0.947151    -1.007418   
+2342      -0.185523     1.770188        0.700773      0.785542     0.308118   
+2343      -0.896090     1.659460       -1.649310      0.665782     0.308118   
+
+      Overall_Cond_Average  Overall_Cond_Below_Average  \
+0                      1.0                         0.0   
+1                      1.0                         0.0   
+2                      1.0                         0.0   
+3                      1.0                         0.0   
+4                      0.0                         0.0   
+...                    ...                         ...   
+2339                   0.0                         1.0   
+2340                   1.0                         0.0   
+2341                   1.0                         0.0   
+2342                   1.0                         0.0   
+2343                   1.0                         0.0   
+
+      Overall_Cond_Excellent  Overall_Cond_Fair  Overall_Cond_Good  ...  \
+0                        0.0                0.0                0.0  ...   
+1                        0.0                0.0                0.0  ...   
+2                        0.0                0.0                0.0  ...   
+3                        0.0                0.0                0.0  ...   
+4                        0.0                0.0                1.0  ...   
+...                      ...                ...                ...  ...   
+2339                     0.0                0.0                0.0  ...   
+2340                     0.0                0.0                0.0  ...   
+2341                     0.0                0.0                0.0  ...   
+2342                     0.0                0.0                0.0  ...   
+2343                     0.0                0.0                0.0  ...   
+
+      Neighborhood_Northridge_Heights  Neighborhood_Northwest_Ames  \
+0                                 0.0                          0.0   
+1                                 1.0                          0.0   
+2                                 0.0                          0.0   
+3                                 0.0                          0.0   
+4                                 0.0                          1.0   
+...                               ...                          ...   
+2339                              0.0                          0.0   
+2340                              1.0                          0.0   
+2341                              0.0                          0.0   
+2342                              0.0                          0.0   
+2343                              0.0                          0.0   
+
+      Neighborhood_Old_Town  Neighborhood_Sawyer  Neighborhood_Sawyer_West  \
+0                       0.0                  0.0                       0.0   
+1                       0.0                  0.0                       0.0   
+2                       0.0                  0.0                       0.0   
+3                       0.0                  0.0                       0.0   
+4                       0.0                  0.0                       0.0   
+...                     ...                  ...                       ...   
+2339                    0.0                  0.0                       0.0   
+2340                    0.0                  0.0                       0.0   
+2341                    0.0                  0.0                       0.0   
+2342                    0.0                  0.0                       0.0   
+2343                    1.0                  0.0                       0.0   
+
+      Neighborhood_Somerset  \
+0                       1.0   
+1                       0.0   
+2                       0.0   
+3                       0.0   
+4                       0.0   
+...                     ...   
+2339                    0.0   
+2340                    0.0   
+2341                    0.0   
+2342                    1.0   
+2343                    0.0   
+
+      Neighborhood_South_and_West_of_Iowa_State_University  \
+0                                                   0.0      
+1                                                   0.0      
+2                                                   0.0      
+3                                                   0.0      
+4                                                   0.0      
+...                                                 ...      
+2339                                                0.0      
+2340                                                0.0      
+2341                                                0.0      
+2342                                                0.0      
+2343                                                0.0      
+
+      Neighborhood_Stone_Brook  Neighborhood_Timberland  Neighborhood_Veenker  
+0                          0.0                      0.0                   0.0  
+1                          0.0                      0.0                   0.0  
+2                          0.0                      0.0                   0.0  
+3                          0.0                      0.0                   0.0  
+4                          0.0                      0.0                   0.0  
+...                        ...                      ...                   ...  
+2339                       0.0                      0.0                   0.0  
+2340                       0.0                      0.0                   0.0  
+2341                       0.0                      0.0                   0.0  
+2342                       0.0                      0.0                   0.0  
+2343                       0.0                      0.0                   0.0  
+
+[2344 rows x 40 columns]
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 2344 entries, 0 to 2343
+Data columns (total 40 columns):
+ #   Column                                                Non-Null Count  Dtype  
+---  ------                                                --------------  -----  
+ 0   Total_Bsmt_SF                                         2344 non-null   float64
+ 1   Gr_Liv_Area                                           2344 non-null   float64
+ 2   Year_Remod_Add                                        2344 non-null   float64
+ 3   First_Flr_SF                                          2344 non-null   float64
+ 4   Garage_Cars                                           2344 non-null   float64
+ 5   Overall_Cond_Average                                  2344 non-null   float64
+ 6   Overall_Cond_Below_Average                            2344 non-null   float64
+ 7   Overall_Cond_Excellent                                2344 non-null   float64
+ 8   Overall_Cond_Fair                                     2344 non-null   float64
+ 9   Overall_Cond_Good                                     2344 non-null   float64
+ 10  Overall_Cond_Poor                                     2344 non-null   float64
+ 11  Overall_Cond_Very_Good                                2344 non-null   float64
+ 12  Overall_Cond_Very_Poor                                2344 non-null   float64
+ 13  Neighborhood_Blueste                                  2344 non-null   float64
+ 14  Neighborhood_Briardale                                2344 non-null   float64
+ 15  Neighborhood_Brookside                                2344 non-null   float64
+ 16  Neighborhood_Clear_Creek                              2344 non-null   float64
+ 17  Neighborhood_College_Creek                            2344 non-null   float64
+ 18  Neighborhood_Crawford                                 2344 non-null   float64
+ 19  Neighborhood_Edwards                                  2344 non-null   float64
+ 20  Neighborhood_Gilbert                                  2344 non-null   float64
+ 21  Neighborhood_Green_Hills                              2344 non-null   float64
+ 22  Neighborhood_Greens                                   2344 non-null   float64
+ 23  Neighborhood_Iowa_DOT_and_Rail_Road                   2344 non-null   float64
+ 24  Neighborhood_Landmark                                 2344 non-null   float64
+ 25  Neighborhood_Meadow_Village                           2344 non-null   float64
+ 26  Neighborhood_Mitchell                                 2344 non-null   float64
+ 27  Neighborhood_North_Ames                               2344 non-null   float64
+ 28  Neighborhood_Northpark_Villa                          2344 non-null   float64
+ 29  Neighborhood_Northridge                               2344 non-null   float64
+ 30  Neighborhood_Northridge_Heights                       2344 non-null   float64
+ 31  Neighborhood_Northwest_Ames                           2344 non-null   float64
+ 32  Neighborhood_Old_Town                                 2344 non-null   float64
+ 33  Neighborhood_Sawyer                                   2344 non-null   float64
+ 34  Neighborhood_Sawyer_West                              2344 non-null   float64
+ 35  Neighborhood_Somerset                                 2344 non-null   float64
+ 36  Neighborhood_South_and_West_of_Iowa_State_University  2344 non-null   float64
+ 37  Neighborhood_Stone_Brook                              2344 non-null   float64
+ 38  Neighborhood_Timberland                               2344 non-null   float64
+ 39  Neighborhood_Veenker                                  2344 non-null   float64
+dtypes: float64(40)
+memory usage: 732.6 KB</code></pre>
+</div>
+</div>
+</section>
+<section id="pipeline-y-modelado-utilizaremos-fit-y-predict" class="level3">
+<h3 class="anchored" data-anchor-id="pipeline-y-modelado-utilizaremos-fit-y-predict">5.5 Pipeline y modelado Utilizaremos fit y predict</h3>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear el pipeline con la regresión lineal</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>pipeline <span class="op">=</span> Pipeline([</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>   (<span class="st">'preprocessor'</span>, preprocessor),</span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>   (<span class="st">'regressor'</span>, LinearRegression())</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Entrenar el pipeline (le damos datos entrenamiento y datos a predecir)</span></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> pipeline.fit(ames_train_selected, ames_y_train)</span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">'''results es un objeto que contiene toda la</span></span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">información de cómo se debe comportar el modelo'''</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="37">
+<pre><code>'results es un objeto que contiene toda la\ninformación de cómo se debe comportar el modelo'</code></pre>
+</div>
+</div>
+</section>
+<section id="predicciones-y-coeficientes-de-regresión" class="level3">
+<h3 class="anchored" data-anchor-id="predicciones-y-coeficientes-de-regresión">5.6 Predicciones y coeficientes de regresión</h3>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> pipeline.predict(ames_x_test)</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>y_pred</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>ames_test <span class="op">=</span> (</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>  ames_x_test <span class="op">&gt;&gt;</span></span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>  mutate(Sale_Price_Pred <span class="op">=</span> y_pred, Sale_Price <span class="op">=</span> ames_y_test)</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a><span class="co">#ames_test.info()</span></span>
+<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a>ames_test <span class="op">&gt;&gt;</span></span>
+<span id="cb66-13"><a href="#cb66-13" aria-hidden="true" tabindex="-1"></a>  select(_.Sale_Price, _.Sale_Price_Pred)</span>
+<span id="cb66-14"><a href="#cb66-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Sale_Price</th>
+<th data-quarto-table-cell-role="th">Sale_Price_Pred</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">390</td>
+<td>165000</td>
+<td>158121.511000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1235</td>
+<td>124000</td>
+<td>126768.848598</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2288</td>
+<td>75000</td>
+<td>96143.356006</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">107</td>
+<td>206000</td>
+<td>203350.818016</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1861</td>
+<td>190000</td>
+<td>243694.682581</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">116</td>
+<td>171000</td>
+<td>163917.913733</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">398</td>
+<td>120500</td>
+<td>120095.746539</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1253</td>
+<td>146000</td>
+<td>208396.365801</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">78</td>
+<td>125000</td>
+<td>105909.113777</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">714</td>
+<td>110000</td>
+<td>104347.790875</td>
+</tr>
+</tbody>
+</table>
+
+<p>586 rows × 2 columns</p>
+</div>
+</div>
+</div>
+<p>Extracción de coeficientes de regresión. Utiliza la librería statsmodels</p>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>X_train_with_intercept <span class="op">=</span> sm.add_constant(transformed_df)</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(ames_y_train, X_train_with_intercept).fit()</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>model.summary()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<table class="simpletable table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>OLS Regression Results</caption>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Dep. Variable:</td>
+<td>y</td>
+<td data-quarto-table-cell-role="th">R-squared:</td>
+<td>0.821</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Model:</td>
+<td>OLS</td>
+<td data-quarto-table-cell-role="th">Adj. R-squared:</td>
+<td>0.817</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Method:</td>
+<td>Least Squares</td>
+<td data-quarto-table-cell-role="th">F-statistic:</td>
+<td>263.2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Date:</td>
+<td>Fri, 20 Oct 2023</td>
+<td data-quarto-table-cell-role="th">Prob (F-statistic):</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Time:</td>
+<td>18:53:54</td>
+<td data-quarto-table-cell-role="th">Log-Likelihood:</td>
+<td>-27763.</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">No. Observations:</td>
+<td>2344</td>
+<td data-quarto-table-cell-role="th">AIC:</td>
+<td>5.561e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Df Residuals:</td>
+<td>2303</td>
+<td data-quarto-table-cell-role="th">BIC:</td>
+<td>5.584e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Df Model:</td>
+<td>40</td>
+<td data-quarto-table-cell-role="th"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Covariance Type:</td>
+<td>nonrobust</td>
+<td data-quarto-table-cell-role="th"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="simpletable table table-sm table-striped small" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td></td>
+<td data-quarto-table-cell-role="th">coef</td>
+<td data-quarto-table-cell-role="th">std err</td>
+<td data-quarto-table-cell-role="th">t</td>
+<td data-quarto-table-cell-role="th">P&gt;|t|</td>
+<td data-quarto-table-cell-role="th">[0.025</td>
+<td data-quarto-table-cell-role="th">0.975]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">const</td>
+<td>1.843e+05</td>
+<td>7669.556</td>
+<td>24.033</td>
+<td>0.000</td>
+<td>1.69e+05</td>
+<td>1.99e+05</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Total_Bsmt_SF</td>
+<td>1.636e+04</td>
+<td>1238.509</td>
+<td>13.208</td>
+<td>0.000</td>
+<td>1.39e+04</td>
+<td>1.88e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Gr_Liv_Area</td>
+<td>2.946e+04</td>
+<td>1012.450</td>
+<td>29.095</td>
+<td>0.000</td>
+<td>2.75e+04</td>
+<td>3.14e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Year_Remod_Add</td>
+<td>6501.0274</td>
+<td>1035.472</td>
+<td>6.278</td>
+<td>0.000</td>
+<td>4470.473</td>
+<td>8531.582</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">First_Flr_SF</td>
+<td>2129.9047</td>
+<td>1352.788</td>
+<td>1.574</td>
+<td>0.116</td>
+<td>-522.904</td>
+<td>4782.714</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Garage_Cars</td>
+<td>1.105e+04</td>
+<td>976.546</td>
+<td>11.318</td>
+<td>0.000</td>
+<td>9137.161</td>
+<td>1.3e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Overall_Cond_Average</td>
+<td>-4999.6011</td>
+<td>2147.816</td>
+<td>-2.328</td>
+<td>0.020</td>
+<td>-9211.456</td>
+<td>-787.746</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Overall_Cond_Below_Average</td>
+<td>-2.201e+04</td>
+<td>4199.386</td>
+<td>-5.241</td>
+<td>0.000</td>
+<td>-3.02e+04</td>
+<td>-1.38e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Overall_Cond_Excellent</td>
+<td>2.39e+04</td>
+<td>6379.283</td>
+<td>3.747</td>
+<td>0.000</td>
+<td>1.14e+04</td>
+<td>3.64e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Overall_Cond_Fair</td>
+<td>-3.126e+04</td>
+<td>5470.428</td>
+<td>-5.715</td>
+<td>0.000</td>
+<td>-4.2e+04</td>
+<td>-2.05e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Overall_Cond_Good</td>
+<td>6510.8695</td>
+<td>2624.073</td>
+<td>2.481</td>
+<td>0.013</td>
+<td>1365.076</td>
+<td>1.17e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Overall_Cond_Poor</td>
+<td>-4.995e+04</td>
+<td>1.15e+04</td>
+<td>-4.329</td>
+<td>0.000</td>
+<td>-7.26e+04</td>
+<td>-2.73e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Overall_Cond_Very_Good</td>
+<td>8061.9504</td>
+<td>3795.011</td>
+<td>2.124</td>
+<td>0.034</td>
+<td>619.953</td>
+<td>1.55e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Overall_Cond_Very_Poor</td>
+<td>-5.358e+04</td>
+<td>1.42e+04</td>
+<td>-3.784</td>
+<td>0.000</td>
+<td>-8.13e+04</td>
+<td>-2.58e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Blueste</td>
+<td>-6605.2247</td>
+<td>1.43e+04</td>
+<td>-0.463</td>
+<td>0.644</td>
+<td>-3.46e+04</td>
+<td>2.14e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Briardale</td>
+<td>-1.693e+04</td>
+<td>1.05e+04</td>
+<td>-1.613</td>
+<td>0.107</td>
+<td>-3.75e+04</td>
+<td>3653.198</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Brookside</td>
+<td>-1.994e+04</td>
+<td>8611.902</td>
+<td>-2.315</td>
+<td>0.021</td>
+<td>-3.68e+04</td>
+<td>-3047.489</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Clear_Creek</td>
+<td>7191.1764</td>
+<td>9323.455</td>
+<td>0.771</td>
+<td>0.441</td>
+<td>-1.11e+04</td>
+<td>2.55e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_College_Creek</td>
+<td>7504.3036</td>
+<td>7655.361</td>
+<td>0.980</td>
+<td>0.327</td>
+<td>-7507.818</td>
+<td>2.25e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Crawford</td>
+<td>6832.0701</td>
+<td>8515.111</td>
+<td>0.802</td>
+<td>0.422</td>
+<td>-9866.016</td>
+<td>2.35e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Edwards</td>
+<td>-1.883e+04</td>
+<td>8113.063</td>
+<td>-2.320</td>
+<td>0.020</td>
+<td>-3.47e+04</td>
+<td>-2916.620</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Gilbert</td>
+<td>3378.2769</td>
+<td>7940.768</td>
+<td>0.425</td>
+<td>0.671</td>
+<td>-1.22e+04</td>
+<td>1.9e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Green_Hills</td>
+<td>1.384e+05</td>
+<td>3.48e+04</td>
+<td>3.975</td>
+<td>0.000</td>
+<td>7.01e+04</td>
+<td>2.07e+05</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Greens</td>
+<td>2.646e+04</td>
+<td>1.57e+04</td>
+<td>1.684</td>
+<td>0.092</td>
+<td>-4358.690</td>
+<td>5.73e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Iowa_DOT_and_Rail_Road</td>
+<td>-2.726e+04</td>
+<td>8774.003</td>
+<td>-3.107</td>
+<td>0.002</td>
+<td>-4.45e+04</td>
+<td>-1.01e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Landmark</td>
+<td>-1.962e+04</td>
+<td>3.48e+04</td>
+<td>-0.564</td>
+<td>0.573</td>
+<td>-8.79e+04</td>
+<td>4.87e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Meadow_Village</td>
+<td>-2.155e+04</td>
+<td>1e+04</td>
+<td>-2.153</td>
+<td>0.031</td>
+<td>-4.12e+04</td>
+<td>-1926.077</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Mitchell</td>
+<td>-1.398e+04</td>
+<td>8211.338</td>
+<td>-1.702</td>
+<td>0.089</td>
+<td>-3.01e+04</td>
+<td>2124.211</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_North_Ames</td>
+<td>-1.759e+04</td>
+<td>7804.746</td>
+<td>-2.253</td>
+<td>0.024</td>
+<td>-3.29e+04</td>
+<td>-2280.405</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Northpark_Villa</td>
+<td>-1.618e+04</td>
+<td>1.14e+04</td>
+<td>-1.424</td>
+<td>0.155</td>
+<td>-3.85e+04</td>
+<td>6104.730</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Northridge</td>
+<td>6.256e+04</td>
+<td>8760.137</td>
+<td>7.142</td>
+<td>0.000</td>
+<td>4.54e+04</td>
+<td>7.97e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Northridge_Heights</td>
+<td>7.174e+04</td>
+<td>7879.905</td>
+<td>9.104</td>
+<td>0.000</td>
+<td>5.63e+04</td>
+<td>8.72e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Northwest_Ames</td>
+<td>-1.43e+04</td>
+<td>8200.271</td>
+<td>-1.744</td>
+<td>0.081</td>
+<td>-3.04e+04</td>
+<td>1781.258</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Old_Town</td>
+<td>-3.732e+04</td>
+<td>8113.086</td>
+<td>-4.599</td>
+<td>0.000</td>
+<td>-5.32e+04</td>
+<td>-2.14e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Sawyer</td>
+<td>-1.49e+04</td>
+<td>8136.136</td>
+<td>-1.831</td>
+<td>0.067</td>
+<td>-3.09e+04</td>
+<td>1054.591</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Sawyer_West</td>
+<td>-4938.2932</td>
+<td>8150.294</td>
+<td>-0.606</td>
+<td>0.545</td>
+<td>-2.09e+04</td>
+<td>1.1e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Somerset</td>
+<td>2.449e+04</td>
+<td>7809.927</td>
+<td>3.136</td>
+<td>0.002</td>
+<td>9175.269</td>
+<td>3.98e+04</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_South_and_West_of_Iowa_State_University</td>
+<td>-2.532e+04</td>
+<td>9598.003</td>
+<td>-2.638</td>
+<td>0.008</td>
+<td>-4.41e+04</td>
+<td>-6501.059</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Stone_Brook</td>
+<td>8.727e+04</td>
+<td>9370.346</td>
+<td>9.313</td>
+<td>0.000</td>
+<td>6.89e+04</td>
+<td>1.06e+05</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neighborhood_Timberland</td>
+<td>2.344e+04</td>
+<td>8638.787</td>
+<td>2.713</td>
+<td>0.007</td>
+<td>6496.495</td>
+<td>4.04e+04</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Neighborhood_Veenker</td>
+<td>2.142e+04</td>
+<td>1.07e+04</td>
+<td>2.004</td>
+<td>0.045</td>
+<td>460.729</td>
+<td>4.24e+04</td>
+</tr>
+</tbody>
+</table>
+<table class="simpletable table table-sm table-striped small" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Omnibus:</td>
+<td>559.817</td>
+<td data-quarto-table-cell-role="th">Durbin-Watson:</td>
+<td>1.977</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Prob(Omnibus):</td>
+<td>0.000</td>
+<td data-quarto-table-cell-role="th">Jarque-Bera (JB):</td>
+<td>25947.039</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Skew:</td>
+<td>0.244</td>
+<td data-quarto-table-cell-role="th">Prob(JB):</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Kurtosis:</td>
+<td>19.292</td>
+<td data-quarto-table-cell-role="th">Cond. No.</td>
+<td>102.</td>
+</tr>
+</tbody>
+</table>
+<br><br>Notes:<br>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</div>
+</div>
+<p>Es importante destacar que la tabla de variables y coeficientes de regresión nos arroja 40 variables, debido a la división de las variables categóricas, lo cual presenta los siguientes aspectos a corregir:</p>
+<ul>
+<li><p>Exceso de variables.</p></li>
+<li><p>En su mayoría presentan desviaciones estándar altas.</p></li>
+<li><p>Siete variables presentan un P Value alto, lo que significa alta probabilidad de que el coeficiente sea cero.</p></li>
+<li><p>Trece variables presentan alta volatilidad dada su desviación estándar e intervalo de confianza (pasa por el cero).</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagenes/tabla%20de%20coeficientes.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Por lo anterior, se advierte necesario fusionar a las variables para analizar el efecto predictivo del modelo dadas nuevas métricas resultantes de desempeño.</p>
+<p>En especial fusionar Northridge, Northrige Heights y Stone Brook, donde se concentra el mayor número de propiedades con precios más altos que como se indicó en el punto 4.3.1, constituyen los datos atípicos en la variable a predecir.</p>
+</section>
+<section id="métricas-de-desempeño-con-variables-no-fusionadas" class="level3">
+<h3 class="anchored" data-anchor-id="métricas-de-desempeño-con-variables-no-fusionadas">5.7 Métricas de desempeño con variables no fusionadas</h3>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>pd.options.display.float_format <span class="op">=</span> <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>y_obs <span class="op">=</span> ames_test[<span class="st">"Sale_Price"</span>]</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> ames_test[<span class="st">"Sale_Price_Pred"</span>]</span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>me <span class="op">=</span> np.mean(y_obs <span class="op">-</span> y_pred)</span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>mae <span class="op">=</span> mean_absolute_error(y_obs, y_pred)</span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>mape <span class="op">=</span> mean_absolute_percentage_error(y_obs, y_pred)</span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>mse <span class="op">=</span> mean_squared_error(y_obs, y_pred)</span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a>rmse <span class="op">=</span> np.sqrt(mse)</span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a>r2 <span class="op">=</span> r2_score(y_obs, y_pred)</span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(y_obs)  <span class="co"># Número de observaciones</span></span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">40</span>  <span class="co"># Número de predictores </span></span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a>r2_adj <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (n <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> (n <span class="op">-</span> p <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> r2)</span>
+<span id="cb68-16"><a href="#cb68-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-17"><a href="#cb68-17" aria-hidden="true" tabindex="-1"></a>metrics_data <span class="op">=</span> {</span>
+<span id="cb68-18"><a href="#cb68-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Metric"</span>: [<span class="st">"ME"</span>, <span class="st">"MAE"</span>, <span class="st">"MAPE"</span>, <span class="st">"MSE"</span>, <span class="st">"RMSE"</span>, <span class="st">"R^2"</span>, <span class="st">"R^2 Adj"</span>],</span>
+<span id="cb68-19"><a href="#cb68-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Value"</span>: [me, mae, mape, mse, rmse, r2, r2_adj]</span>
+<span id="cb68-20"><a href="#cb68-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb68-21"><a href="#cb68-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-22"><a href="#cb68-22" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="op">=</span> pd.DataFrame(metrics_data)</span>
+<span id="cb68-23"><a href="#cb68-23" aria-hidden="true" tabindex="-1"></a>metrics_df</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="40">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Metric</th>
+<th data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>ME</td>
+<td>759.76</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>MAE</td>
+<td>23266.15</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>MAPE</td>
+<td>0.13</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>MSE</td>
+<td>1534762636.16</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>RMSE</td>
+<td>39176.05</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>R^2</td>
+<td>0.77</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>R^2 Adj</td>
+<td>0.75</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="gráficos-de-desempeño-del-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-de-desempeño-del-modelo">5.8 Gráficos de desempeño del modelo</h3>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>  ames_test <span class="op">&gt;&gt;</span></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>    ggplot(aes(x <span class="op">=</span> <span class="st">"Sale_Price_Pred"</span>, y <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span></span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>    scale_y_continuous(labels <span class="op">=</span> dollar_format(digits<span class="op">=</span><span class="dv">0</span>, big_mark<span class="op">=</span><span class="st">','</span>), limits <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">600000</span>] ) <span class="op">+</span></span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>    scale_x_continuous(labels <span class="op">=</span> dollar_format(digits<span class="op">=</span><span class="dv">0</span>, big_mark<span class="op">=</span><span class="st">','</span>), limits <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">500000</span>] ) <span class="op">+</span></span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a>    geom_abline(color <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a>    coord_equal() <span class="op">+</span></span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>    labs(</span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a>      title <span class="op">=</span> <span class="st">"Comparación entre predicción y observación"</span>,</span>
+<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a>      x <span class="op">=</span> <span class="st">"Predicción"</span>,</span>
+<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a>      y <span class="op">=</span> <span class="st">"Observación"</span>)</span>
+<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\52554\Documents\.virtualenvs\venv_dsml_py3_10\lib\site-packages\plotnine\layer.py:364: PlotnineWarning: geom_point : Removed 2 rows containing missing values.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-42-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="41">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>ames_test <span class="op">&gt;&gt;</span></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  select(_.Sale_Price, _.Sale_Price_Pred) <span class="op">&gt;&gt;</span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>  mutate(error <span class="op">=</span> _.Sale_Price <span class="op">-</span> _.Sale_Price_Pred) <span class="op">&gt;&gt;</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"error"</span>)) <span class="op">+</span></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>  geom_histogram(color <span class="op">=</span> <span class="st">"white"</span>, fill <span class="op">=</span> <span class="st">"black"</span>) <span class="op">+</span></span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>  geom_vline(xintercept <span class="op">=</span> <span class="dv">0</span>, color <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>  scale_x_continuous(labels<span class="op">=</span>dollar_format(big_mark<span class="op">=</span><span class="st">','</span>, digits<span class="op">=</span><span class="dv">0</span>)) <span class="op">+</span> </span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a>  ylab(<span class="st">"Conteos de clase"</span>) <span class="op">+</span> xlab(<span class="st">"Errores"</span>) <span class="op">+</span></span>
+<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"Distribución de error"</span>)</span>
+<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\52554\Documents\.virtualenvs\venv_dsml_py3_10\lib\site-packages\plotnine\stats\stat_bin.py:109: PlotnineWarning: 'stat_bin()' using 'bins = 97'. Pick better value with 'binwidth'.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-43-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>ames_test <span class="op">&gt;&gt;</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>  select(_.Sale_Price, _.Sale_Price_Pred) <span class="op">&gt;&gt;</span></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>  mutate(error <span class="op">=</span> _.Sale_Price <span class="op">-</span> _.Sale_Price_Pred) <span class="op">&gt;&gt;</span></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(sample <span class="op">=</span> <span class="st">"error"</span>)) <span class="op">+</span></span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>  geom_qq(alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="op">+</span> stat_qq_line(color <span class="op">=</span> <span class="st">"red"</span>) <span class="op">+</span></span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels<span class="op">=</span>dollar_format(big_mark<span class="op">=</span><span class="st">','</span>, digits <span class="op">=</span> <span class="dv">0</span>)) <span class="op">+</span> </span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>  xlab(<span class="st">"Distribución normal"</span>) <span class="op">+</span> ylab(<span class="st">"Distribución de errores"</span>) <span class="op">+</span></span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"QQ-Plot"</span>)</span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-44-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>ames_test <span class="op">&gt;&gt;</span></span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>  select(_.Sale_Price, _.Sale_Price_Pred) <span class="op">&gt;&gt;</span></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>  mutate(error <span class="op">=</span> _.Sale_Price <span class="op">-</span> _.Sale_Price_Pred) <span class="op">&gt;&gt;</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a>  ggplot(aes(x <span class="op">=</span> <span class="st">"Sale_Price"</span>)) <span class="op">+</span></span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a>  geom_linerange(aes(ymin <span class="op">=</span> <span class="dv">0</span>, ymax <span class="op">=</span> <span class="st">"error"</span>), colour <span class="op">=</span> <span class="st">"purple"</span>) <span class="op">+</span></span>
+<span id="cb77-7"><a href="#cb77-7" aria-hidden="true" tabindex="-1"></a>  geom_point(aes(y <span class="op">=</span> <span class="st">"error"</span>), size <span class="op">=</span> <span class="fl">0.05</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb77-8"><a href="#cb77-8" aria-hidden="true" tabindex="-1"></a>  geom_abline(intercept <span class="op">=</span> <span class="dv">0</span>, slope <span class="op">=</span> <span class="dv">0</span>) <span class="op">+</span></span>
+<span id="cb77-9"><a href="#cb77-9" aria-hidden="true" tabindex="-1"></a>  scale_x_continuous(labels<span class="op">=</span>dollar_format(big_mark<span class="op">=</span><span class="st">','</span>, digits<span class="op">=</span><span class="dv">0</span>)) <span class="op">+</span> </span>
+<span id="cb77-10"><a href="#cb77-10" aria-hidden="true" tabindex="-1"></a>  scale_y_continuous(labels<span class="op">=</span>dollar_format(big_mark<span class="op">=</span><span class="st">','</span>, digits<span class="op">=</span><span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb77-11"><a href="#cb77-11" aria-hidden="true" tabindex="-1"></a>  xlab(<span class="st">"Precio real"</span>) <span class="op">+</span> ylab(<span class="st">"Error de estimación"</span>) <span class="op">+</span></span>
+<span id="cb77-12"><a href="#cb77-12" aria-hidden="true" tabindex="-1"></a>  ggtitle(<span class="st">"Relación entre error y precio de venta"</span>)</span>
+<span id="cb77-13"><a href="#cb77-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-45-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="44">
+<pre><code>&lt;Figure Size: (640 x 480)&gt;</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusiones" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones"><strong>6. Conclusiones</strong></h2>
+<p>La conclusión con respecto a la precisión de este modelo es que no alcanza a tener un buen desempeño, teniendo pendientes los siguientes ajustes y correcciones:</p>
+<ul>
+<li><p>La selección de dos variables categóricas ocasiona que tengamos 40 categorías o predictores.</p></li>
+<li><p>A pesar de que los resultados de regresión muestran una <em>r</em> cuadrada de 0.821, las métricas finales de regresión muestran en <em>r</em> cuadrada 0.77 y <em>r</em> cuadrada ajustada 0.75.</p></li>
+<li><p>Los gráficos de desempéño muestran alta volatilidad en particular en las casas de precios altos.</p></li>
+<li><p>El cuadro detalle de regresión pone en evidencia categorías con desviación estándar alta, <em>P Value</em> y un intervalo de confianza que confirman una alta volatilidad que afecta negativamente la capácidad predictora del modelo.</p></li>
+<li><p>Es necesario seleccionar las categorías viables para fusionar, esperando así mitigar un poco la alta volatilidad y mejorar la capacidad predictora del modelo, cuya evidencia estará en las métricas de desempeño.</p></li>
+</ul>
 </section>
 </section>
 
